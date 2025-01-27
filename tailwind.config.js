@@ -14,7 +14,9 @@ module.exports = {
         input: '#F2F2F2CC',
         "input-text": '#3C3C43',
         "dark-text": '#17171B',
-        "grey-text": '#3C3C43'
+        "grey-text": '#3C3C43',
+        "border-grey": '#BDBDC6',
+        "grey-light": "#F4F4F7"
       }
   	}
   },
