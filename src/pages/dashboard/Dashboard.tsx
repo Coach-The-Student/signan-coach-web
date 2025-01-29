@@ -1,7 +1,9 @@
 
 function Dashboard() {
   return (
-    <section className="w-full">Dashboard</section>
+    <section className="w-full h-full">
+      
+    </section>
   )
 }
 

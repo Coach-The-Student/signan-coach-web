@@ -3,18 +3,23 @@ import { Link } from "react-router-dom"
 
 function Login() {
   return (
-    <section className="w-full h-screen flex flex-col gap-6 justify-center items-center">
-      <h2 className="text-2xl font-semibold text-center">
-        Log in to back to<br />
-        Signan Solution
+    <>
+      <h2 className="text-2xl font-semibold">
+        Sign In
       </h2>
-      <form className="w-1/4 flex flex-col gap-2">
-        <Input placeholder="Email address" />
-        <Input placeholder="Password" />
-        <Button size="lg">Continue</Button>
-        <Link to="/reset-password/confirm-email" className="text-primary text-center text-sm">Forgot password?</Link>
+      <form className="flex flex-col gap-3">
+        <Input label="Email address" />
+        <Input label="Password" />
+        <Button size="lg" className="mt-4">Continue</Button>
       </form>
-    </section>
+      <div className="flex flex-col items-center gap-2 text-sm">
+        <Link to="/reset-password/confirm-email" className="text-primary text-center text-sm">Forgot password?</Link>
+        <p className="text-center">
+          <span className="text-grey-text">Don't have an account?</span>
+          <Link to="/register" className="text-primary text-center text-sm ml-1">Create Account</Link>
+        </p>
+      </div>
+    </>
   )
 }
 
