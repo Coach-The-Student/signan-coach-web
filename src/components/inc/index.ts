@@ -1,1 +1,3 @@
-export * from "./avatar"
+export * from "./Avatar"
+export { default as Card } from "./Card"
+export { default as HorizontalLine } from "./HorizontalLine"
