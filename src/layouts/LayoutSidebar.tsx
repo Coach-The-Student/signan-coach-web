@@ -1,45 +1,28 @@
+import { getScreenWidth } from "@/helpers"
+import { useEffect, useState } from "react"
 import { NavLink, Outlet } from "react-router-dom"
+import { data, LayoutTabbar } from "."
 
 function LayoutSidebar() {
-  const navs = [
-    {
-      title: "Dashboard",
-      href: "",
-      icon: "dashboard"
-    },
-    {
-      title: "Engagements",
-      href: "/engagements",
-      icon: "engagements"
-    },
-    {
-      title: "Resources",
-      href: "/resources",
-      icon: "resources"
-    },
-    {
-      title: "Clients",
-      href: "/clients",
-      icon: "clients"
-    },
-    {
-      title: "Report",
-      href: "/report",
-      icon: "report"
-    },
-    {
-      title: "Settings",
-      href: "/settings",
-      icon: "settings"
-    }
-  ]
+  const [ breakPoint, setBreakPoint ] = useState("")
 
+  useEffect(() => {
+    const { type } = getScreenWidth()
+    setBreakPoint(type)
+
+    window.addEventListener("resize", () => {
+      const { type } = getScreenWidth()
+      setBreakPoint(type)
+    })
+  }, [])
+
+  if (breakPoint === "md" || breakPoint === "sm") return <LayoutTabbar />
   return (
     <div className="flex">
       <aside className="fixed w-[18%] h-[90vh] px-4 py-8 flex flex-col justify-between">
         <nav>
           <ul className="flex flex-col">
-            {navs.map((nav) => (
+            {data.navs.map((nav) => (
               <li>
                 <NavLink to={nav.href} className={({isActive}) => `${isActive && "bg-grey-light"} inline-block w-full py-3 px-4 rounded-lg text-xs font-medium`}>{nav.title}</NavLink>
               </li>

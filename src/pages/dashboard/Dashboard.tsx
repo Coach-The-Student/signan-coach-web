@@ -79,8 +79,11 @@ function Dashboard() {
   ]
 
   return (
-    <div className="w-full h-full p-8">
-      <div className="border border-border-grey p-6 rounded-xl flex flex-col gap-6">
+    <div className="w-full h-full p-4 md:p-8 flex flex-col gap-6">
+      <div>
+        <h2 className="text-xl lg:text-2xl font-bold">General Dasboard</h2>
+      </div>
+      <div className="border border-border-grey p-2 md:p-6 rounded-xl flex flex-col gap-6">
         <Card>
           <Card.Header title="Notifications" />
           <Card.Body>

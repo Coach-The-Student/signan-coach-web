@@ -23,13 +23,13 @@ function LayoutHeader() {
 
   return (
     <div>
-      <header className="w-full h-[10vh] flex justify-between items-center px-6">
+      <header className="w-full h-[5vh] md:h-[10vh] flex justify-between items-center px-6">
         <div>
 
         </div>
         <div>
           <nav>
-            <ul className="flex gap-5 items-center">
+            <ul className="hidden md:flex gap-5 items-center">
               {navs.map((nav) => (
                 <li>
                   <Link to={nav.href} className="text-grey-text text-sm text-[#3A3A3ACC]">{nav.title}</Link>
