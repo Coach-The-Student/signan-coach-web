@@ -1,10 +1,9 @@
-
-function Card({children}:{children: React.ReactNode}) {
+function Card({ children }: { children: React.ReactNode }) {
   return (
     <section className="bg-grey-card rounded-xl overflow-hidden">
       {children}
     </section>
-  )
+  );
 }
 
 interface HeaderProps {
@@ -12,7 +11,7 @@ interface HeaderProps {
   title?: string;
   info?: string;
 }
-function Header({children, title, info}:HeaderProps) {
+function Header({ children, title, info }: HeaderProps) {
   return (
     <div className="p-4 border-b border-border-grey">
       {title ? (
@@ -20,20 +19,18 @@ function Header({children, title, info}:HeaderProps) {
           <h3 className="font-medium">{title}</h3>
           {info && <span>i</span>}
         </div>
-      ) : children}
+      ) : (
+        children
+      )}
     </div>
-  )
+  );
 }
 
-function Body({children}:{children: React.ReactNode}) {
-  return (
-    <div className="p-4 py-10">
-      {children}
-    </div>
-  )
+function Body({ children }: { children: React.ReactNode }) {
+  return <div className="p-4 py-10">{children}</div>;
 }
 
-Card.Header = Header
-Card.Body = Body
+Card.Header = Header;
+Card.Body = Body;
 
-export default Card
+export default Card;

@@ -1,16 +1,13 @@
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/base"
+} from "@/components/base";
 
-function SessionsTable({
-  data
-}:any) {
+function SessionsTable({ data }: any) {
   return (
     <Table className="text-sm">
       <TableHeader>
@@ -24,7 +21,7 @@ function SessionsTable({
         </TableRow>
       </TableHeader>
       <TableBody>
-        {data.map((detail:any) => (
+        {data.map((detail: any) => (
           <TableRow>
             <TableCell>{detail.coach}</TableCell>
             <TableCell>{detail.client}</TableCell>
@@ -39,7 +36,7 @@ function SessionsTable({
         ))}
       </TableBody>
     </Table>
-  )
+  );
 }
 
-export default SessionsTable
+export default SessionsTable;

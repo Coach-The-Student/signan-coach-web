@@ -1,38 +1,38 @@
-import { NavLink, Outlet } from "react-router-dom"
+import { NavLink, Outlet } from "react-router-dom";
 
 function LayoutSidebar() {
   const navs = [
     {
       title: "Dashboard",
       href: "",
-      icon: "dashboard"
+      icon: "dashboard",
     },
     {
       title: "Engagements",
       href: "/engagements",
-      icon: "engagements"
+      icon: "engagements",
     },
     {
       title: "Resources",
       href: "/resources",
-      icon: "resources"
+      icon: "resources",
     },
     {
       title: "Clients",
       href: "/clients",
-      icon: "clients"
+      icon: "clients",
     },
     {
       title: "Report",
       href: "/report",
-      icon: "report"
+      icon: "report",
     },
     {
       title: "Settings",
       href: "/settings",
-      icon: "settings"
-    }
-  ]
+      icon: "settings",
+    },
+  ];
 
   return (
     <div className="flex">
@@ -41,7 +41,14 @@ function LayoutSidebar() {
           <ul className="flex flex-col">
             {navs.map((nav) => (
               <li>
-                <NavLink to={nav.href} className={({isActive}) => `${isActive && "bg-grey-light"} inline-block w-full py-3 px-4 rounded-lg text-xs font-medium`}>{nav.title}</NavLink>
+                <NavLink
+                  to={nav.href}
+                  className={({ isActive }) =>
+                    `${isActive && "bg-grey-light"} inline-block w-full py-3 px-4 rounded-lg text-xs font-medium`
+                  }
+                >
+                  {nav.title}
+                </NavLink>
               </li>
             ))}
           </ul>
@@ -51,7 +58,9 @@ function LayoutSidebar() {
             <h4 className="text-xs font-bold">Disclaimer</h4>
             <ul className="list-disc list-outside ml-3 mt-2 text-xs text-grey-text">
               <li>Data about revenue for the week is incomplete</li>
-              <li>The monthly report always includes the most updated information</li>
+              <li>
+                The monthly report always includes the most updated information
+              </li>
             </ul>
           </div>
           <ul className="flex gap-4 px-4 text-xs text-grey-text">
@@ -64,7 +73,7 @@ function LayoutSidebar() {
         <Outlet />
       </main>
     </div>
-  )
+  );
 }
 
-export default LayoutSidebar
+export default LayoutSidebar;

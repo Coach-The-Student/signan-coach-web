@@ -1,6 +1,12 @@
 import { Routes, Route } from "react-router";
 import { Dashboard } from "@/pages/dashboard";
-import { ConfirmEmail, Login, NewPassword, Register, VerifyEmail } from "@/pages/auth";
+import {
+  ConfirmEmail,
+  Login,
+  NewPassword,
+  Register,
+  VerifyEmail,
+} from "@/pages/auth";
 import { LayoutAuth } from "@/pages/auth/layouts";
 import { LayoutHeader, LayoutSidebar } from "@/layouts";
 
@@ -25,7 +31,7 @@ function Router() {
         </Route>
       </Route>
     </Routes>
-  )
+  );
 }
 
-export default Router
+export default Router;
