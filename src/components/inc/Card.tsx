@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 function Card({ children }: { children: React.ReactNode }) {
+=======
+import { info as infoIcon } from "@/assets/icons";
+
+function Card({children}:{children: React.ReactNode}) {
+>>>>>>> origin/dev
   return (
     <section className="bg-grey-card rounded-xl overflow-hidden">
       {children}
@@ -17,7 +23,7 @@ function Header({ children, title, info }: HeaderProps) {
       {title ? (
         <div className="flex justify-between items-center">
           <h3 className="font-medium">{title}</h3>
-          {info && <span>i</span>}
+          {info && <img src={infoIcon} />}
         </div>
       ) : (
         children

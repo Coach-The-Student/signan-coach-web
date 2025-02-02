@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+import { more } from "@/assets/icons";
+
+>>>>>>> origin/dev
 interface Props {
   type: string;
   message: string;
@@ -15,7 +20,7 @@ function Notification({ type, message }: Props) {
           <p className="text-xs text-grey-text">{message}</p>
         </div>
       </div>
-      <span>i</span>
+      <img src={more} />
     </div>
   );
 }

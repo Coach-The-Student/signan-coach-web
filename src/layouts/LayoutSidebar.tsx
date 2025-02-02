@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { NavLink, Outlet } from "react-router-dom";
 
 function LayoutSidebar() {
@@ -33,20 +34,48 @@ function LayoutSidebar() {
       icon: "settings",
     },
   ];
+=======
+import { getScreenWidth } from "@/helpers"
+import { useEffect, useState } from "react"
+import { NavLink, Outlet } from "react-router-dom"
+import { data, LayoutTabbar } from "."
+import * as icons from "@/assets/icons"
 
+function LayoutSidebar() {
+  const [ breakPoint, setBreakPoint ] = useState("")
+>>>>>>> origin/dev
+
+  useEffect(() => {
+    const { type } = getScreenWidth()
+    setBreakPoint(type)
+
+    window.addEventListener("resize", () => {
+      const { type } = getScreenWidth()
+      setBreakPoint(type)
+    })
+  }, [])
+
+  if (breakPoint === "md" || breakPoint === "sm") return <LayoutTabbar />
   return (
     <div className="flex">
       <aside className="fixed w-[18%] h-[90vh] px-4 py-8 flex flex-col justify-between">
         <nav>
           <ul className="flex flex-col">
-            {navs.map((nav) => (
+            {data.navs.map((nav) => (
               <li>
+<<<<<<< HEAD
                 <NavLink
                   to={nav.href}
                   className={({ isActive }) =>
                     `${isActive && "bg-grey-light"} inline-block w-full py-3 px-4 rounded-lg text-xs font-medium`
                   }
                 >
+=======
+                <NavLink to={nav.href} className={({isActive}) => `${isActive && "bg-grey-light"} w-full py-3 px-4 rounded-lg text-xs font-medium flex items-center gap-4`}>
+                  {/* todo: write correct dynamic types */}
+                  {/* @ts-ignore: icon names exist as icons */}
+                  <img src={icons[nav.icon]} width={20} />
+>>>>>>> origin/dev
                   {nav.title}
                 </NavLink>
               </li>
@@ -55,8 +84,11 @@ function LayoutSidebar() {
         </nav>
         <div className="flex flex-col gap-3">
           <div className="bg-grey-light rounded-xl mx-2 p-4">
-            <h4 className="text-xs font-bold">Disclaimer</h4>
-            <ul className="list-disc list-outside ml-3 mt-2 text-xs text-grey-text">
+            <div className="flex items-center gap-2">
+              <img src={icons["comment"]} />
+              <h4 className="text-xs font-bold">Disclaimer</h4>
+            </div>
+            <ul className="list-disc list-outside ml-4 mt-2 text-xs text-grey-text">
               <li>Data about revenue for the week is incomplete</li>
               <li>
                 The monthly report always includes the most updated information
