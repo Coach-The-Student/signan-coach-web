@@ -1,6 +1,15 @@
-import { Card, HorizontalLine } from "@/components/inc"
-import { Assignment, Notification, SessionsTable } from "./components"
+import { addClient, createInvoice, dropdown, moreBars, settings } from "@/assets/icons"
 import { Button } from "@/components/base"
+import { Card, HorizontalLine } from "@/components/inc"
+import { Notification, SessionsTable, Tasks } from "./components"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/inc"
 
 function Dashboard() {
   const notifications = [
@@ -14,7 +23,7 @@ function Dashboard() {
     }
   ]
 
-  const assignments = [
+  const tasks = [
     {
       type: "personal assignment",
       message: "Lorem ipsum dolor. Assumenda rem cumque vero saepe minima? Laudantium tempora provident beatae! Quidem, molestias."
@@ -80,12 +89,55 @@ function Dashboard() {
 
   return (
     <div className="w-full h-full p-4 md:p-8 flex flex-col gap-6">
-      <div>
+      <section className="flex justify-between items-center mt-0 md:mt-6">
         <h2 className="text-xl lg:text-2xl font-bold">General Dasboard</h2>
-      </div>
+        <div className="hidden lg:flex gap-2">
+          <Button variant="outline" size="sm" className="text-grey-text font-normal">
+            Quick Setup
+            <img src={settings} />
+          </Button>
+          <Button variant="outline" size="sm" className="text-grey-text font-normal">
+            Create Engagement
+            <img src={dropdown} />
+          </Button>
+          <Button variant="outline" size="sm" className="text-grey-text font-normal">
+            Add Client
+            <img src={addClient} />
+          </Button>
+          <Button variant="outline" size="sm" className="text-grey-text font-normal">
+            Create Invoice
+            <img src={createInvoice} />
+          </Button>
+        </div>
+        <div className="block lg:hidden">
+          <DropdownMenu>
+            <DropdownMenuTrigger>
+              <img src={moreBars} />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="mr-4">
+              <DropdownMenuItem>
+                Quick Setup
+                <img src={settings} />
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                Create Engagement
+                <img src={dropdown} />
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                Add Client
+                <img src={addClient} />
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                Create Invoice
+                <img src={createInvoice} />
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
+      </section>
       <div className="border border-border-grey p-2 md:p-6 rounded-xl flex flex-col gap-6">
         <Card>
-          <Card.Header title="Notifications" />
+          <Card.Header title="Notifications" info="info" />
           <Card.Body>
             <div className="w-full flex flex-col items-center gap-6">
               <div className="w-full">
@@ -96,27 +148,33 @@ function Dashboard() {
                   </>
                 ))}
               </div>
-              <Button size="sm" variant="secondary" className="font-light">View more</Button>
+              <Button size="sm" variant="secondary" className="font-light flex items-center">
+                View more
+                <img src={dropdown} width={8} />
+              </Button>
             </div>
           </Card.Body>
         </Card>
 
         <Card>
-          <Card.Header title={`Sessions (${sessions.length})`} />
+          <Card.Header title={`Sessions (${sessions.length})`} info="info" />
           <Card.Body>
             <div className="flex flex-col items-center gap-4">
               <SessionsTable data={sessions} />
-              <Button size="sm" variant="secondary" className="font-light">View more</Button>
+              <Button size="sm" variant="secondary" className="font-light flex items-center">
+                View more
+                <img src={dropdown} width={8} />
+              </Button>
             </div>
           </Card.Body>
         </Card>
 
         <Card>
-          <Card.Header title="Assignments" />
+          <Card.Header title="Tasks" info="info" />
           <Card.Body>
-            {assignments.map((assignment, index) => (
+            {tasks.map((task, index) => (
               <>
-                <Assignment key={index} {...assignment} />
+                <Tasks key={index} {...task} />
                 {notifications.length !== index + 1 && <HorizontalLine className="my-4" />}
               </>
             ))}

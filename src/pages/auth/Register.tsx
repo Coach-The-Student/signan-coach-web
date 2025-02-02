@@ -15,7 +15,7 @@ function Register() {
         Create Account
       </h2>
       <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-        <div className="flex gap-3">
+        <div className="w-full flex gap-3">
           <Input label="First Name" />
           <Input label="Last Name" />
         </div>

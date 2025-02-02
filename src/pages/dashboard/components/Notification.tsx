@@ -1,3 +1,4 @@
+import { more } from "@/assets/icons";
 
 interface Props {
   type: string;
@@ -17,7 +18,7 @@ function Notification({
           <p className="text-xs text-grey-text">{message}</p>
         </div>
       </div>
-      <span>i</span>
+      <img src={more} />
     </div>
   )
 }

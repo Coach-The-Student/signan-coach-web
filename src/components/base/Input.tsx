@@ -9,7 +9,7 @@ interface Props extends React.ComponentProps<"input"> {
 const Input = React.forwardRef<HTMLInputElement, Props>(
   ({ className, type, label, ...props }, ref) => {
     return (
-      <div className="flex flex-col gap-1">
+      <div className="w-full flex flex-col gap-1">
         <label htmlFor={props.id} className="text-sm ml-1">{label}</label>
         <input
           type={type}

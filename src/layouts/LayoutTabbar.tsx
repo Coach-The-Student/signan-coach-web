@@ -1,5 +1,6 @@
 import { NavLink, Outlet } from 'react-router-dom'
 import { data } from "."
+import * as icons from "@/assets/icons"
 
 function LayoutTabbar() {
   return (
@@ -10,7 +11,9 @@ function LayoutTabbar() {
           {data.navs.map((nav) => (
             <li className='flex flex-col items-center w-full'>
               <NavLink to={nav.href} className={({isActive}) => `${isActive && "bg-grey-light"} w-8 py-2 rounded-lg text-[10px] font-medium flex flex-col items-center`}>
-                {nav.title[0]}
+                {/* todo: write correct dynamic types */}
+                {/* @ts-ignore: icon names exist as icons */}
+                <img src={icons[nav.icon]} width={20} />
               </NavLink>
               <span className='text-[8px]'>{nav.title}</span>
             </li>

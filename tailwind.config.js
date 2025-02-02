@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import { BREAK_POINTS } from "./src/constants"
+
 module.exports = {
     darkMode: ["class"],
     content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
@@ -20,7 +22,14 @@ module.exports = {
         "grey-light": "#F4F4F7",
         "grey-card": "#F7F7FA"
       }
-  	}
+  	},
+    screens: {
+      'sm': `${BREAK_POINTS.sm}px`,
+      'md': `${BREAK_POINTS.md}px`,
+      'lg': `${BREAK_POINTS.lg}px`,
+      'xl': `${BREAK_POINTS.xl}px`,
+    }
+
   },
   plugins: [require("tailwindcss-animate")],
 }
