@@ -1,4 +1,5 @@
 export { default as LayoutHeader } from "./LayoutHeader"
-export { default as LayoutSidebar } from "./LayoutSidebar"
-export { default as LayoutTabbar } from "./LayoutTabbar"
+export { default as LayoutDashboardHeader } from "./LayoutDashboardHeader"
+export { default as LayoutDashboardSidebar } from "./LayoutDashboardSidebar"
+export { default as LayoutDashboardTabbar } from "./LayoutDashboardTabbar"
 export { default as data } from "./data.json"

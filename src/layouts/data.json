@@ -1,6 +1,28 @@
 {
   "navs": [
     {
+      "title": "Home",
+      "href": "/"
+    },
+    {
+      "title": "Find a Coach",
+      "href": "/find-coach"
+    },
+    {
+      "title": "Coaching Platform",
+      "href": "/coaching"
+    },
+    {
+      "title": "Pricing",
+      "href": "/pricing"
+    },
+    {
+      "title": "Features",
+      "href": "/features"
+    }
+  ],
+  "dashboard_navs": [
+    {
       "title": "Dashboard",
       "href": "",
       "icon": "dashboard"

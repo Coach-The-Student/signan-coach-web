@@ -1,10 +1,10 @@
+import * as icons from "@/assets/icons"
 import { getScreenWidth } from "@/helpers"
 import { useEffect, useState } from "react"
 import { NavLink, Outlet } from "react-router-dom"
-import { data, LayoutTabbar } from "."
-import * as icons from "@/assets/icons"
+import { data, LayoutDashboardTabbar } from "."
 
-function LayoutSidebar() {
+function LayoutDashboardSidebar() {
   const [ breakPoint, setBreakPoint ] = useState("")
 
   useEffect(() => {
@@ -17,15 +17,15 @@ function LayoutSidebar() {
     })
   }, [])
 
-  if (breakPoint === "md" || breakPoint === "sm") return <LayoutTabbar />
+  if (breakPoint === "md" || breakPoint === "sm") return <LayoutDashboardTabbar />
   return (
     <div className="flex">
       <aside className="fixed w-[18%] h-[90vh] px-4 py-8 flex flex-col justify-between">
         <nav>
           <ul className="flex flex-col">
-            {data.navs.map((nav) => (
+            {data.dashboard_navs.map((nav) => (
               <li>
-                <NavLink to={nav.href} className={({isActive}) => `${isActive && "bg-grey-light"} w-full py-3 px-4 rounded-lg text-xs font-medium flex items-center gap-4`}>
+                <NavLink to={`/dashboard${nav.href ? `/${nav.href}` : ""}`} className={({isActive}) => `${isActive && "bg-grey-light"} w-full py-3 px-4 rounded-lg text-xs font-medium flex items-center gap-4`}>
                   {/* todo: write correct dynamic types */}
                   {/* @ts-ignore: icon names exist as icons */}
                   <img src={icons[nav.icon]} width={20} />
@@ -59,4 +59,4 @@ function LayoutSidebar() {
   )
 }
 
-export default LayoutSidebar
+export default LayoutDashboardSidebar

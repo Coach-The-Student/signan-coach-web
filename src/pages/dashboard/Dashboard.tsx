@@ -1,15 +1,11 @@
 import { addClient, createInvoice, dropdown, moreBars, settings } from "@/assets/icons"
 import { Button } from "@/components/base"
-import { Card, HorizontalLine } from "@/components/inc"
-import { Notification, SessionsTable, Tasks } from "./components"
 import {
-  DropdownMenu,
+  Card, DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
+  DropdownMenuItem, DropdownMenuTrigger, HorizontalLine
 } from "@/components/inc"
+import { Notification, SessionsTable, Tasks } from "./components"
 
 function Dashboard() {
   const notifications = [

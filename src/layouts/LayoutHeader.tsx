@@ -1,81 +1,45 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/inc"
-import { Link, Outlet } from "react-router-dom"
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/inc"
 import Logo from "@/assets/logo.png"
+import { Button } from "@/components/base"
+import { NavLink, Outlet } from "react-router-dom"
+import { data } from "."
 
 function LayoutHeader() {
-  const navs = [
-    {
-      title: "Coaching Dashboard",
-      href: ""
-    },
-    {
-      title: "Coaching Marketplace",
-      href: ""
-    },
-    {
-      title: "AI Content",
-      href: ""
-    },
-    {
-      title: "Home",
-      href: ""
-    }
-  ]
-
   return (
-    <div>
-      <header className="w-full h-[5vh] md:h-[10vh] hidden lg:flex justify-between items-center px-6">
-        <div>
-          <img src={Logo} />
-        </div>
-        <div>
-          <nav>
-            <ul className="hidden md:flex gap-5 items-center">
-              {navs.map((nav) => (
+    <>
+      <header className="fixed top-4 px-24 w-full">
+        <div className="flex justify-between items-center w-full py-2 px-8 shadow-md rounded-full">
+          <div className="flex items-center gap-2">
+            <img src={Logo} />
+            <h1 className="font-bold">Signan Solution</h1>
+          </div>
+          <nav className="flex gap-8">
+            <ul className="flex items-center">
+              {data.navs.map((nav) => (
                 <li>
-                  <Link to={nav.href} className="text-grey-text text-sm text-[#3A3A3ACC]">{nav.title}</Link>
+                  <NavLink
+                    to={nav.href}
+                    className={({isActive}) => `${isActive && "bg-grey-light border text-grey-text"} relative text-[#4D4D4D] w-full py-2 px-4 rounded-full text-sm font-medium flex flex-col items-center gap-4`}
+                    children={({isActive}) => (
+                      <>
+                        <span>{nav.title}</span>
+                        <hr className={`${isActive ? "opacity-100" : "opacity-0"} absolute bottom-[1px] w-1/3 h-[3px] bg-primary rounded-full`} />
+                      </>
+                    )}
+                  />
                 </li>
               ))}
-              <li>
-              <DropdownMenu>
-                <DropdownMenuTrigger>
-                  <Avatar>
-                    <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-                    <AvatarFallback>CN</AvatarFallback>
-                  </Avatar>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="mr-4">
-                  <DropdownMenuLabel className="flex gap-2 items-center mb-4">
-                    <Avatar>
-                      <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-                      <AvatarFallback>CN</AvatarFallback>
-                    </Avatar>
-                    <div className="flex flex-col">
-                      <h4 className="text-sm font-medium">Nelson Mandela</h4>
-                      <span className="text-xs text-grey-text font-normal">nelson@gmail.com</span>
-                    </div>
-                  </DropdownMenuLabel>
-                  <DropdownMenuItem>Settings</DropdownMenuItem>
-                  <DropdownMenuItem>Help</DropdownMenuItem>
-                  <DropdownMenuSeparator />
-                  <DropdownMenuItem>Logout</DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
-              </li>
             </ul>
+            <div className="flex gap-2">
+              <Button variant="grey" className="rounded-full px-6">Login</Button>
+              <Button className="rounded-full">Get started</Button>
+            </div>
           </nav>
         </div>
       </header>
-      <Outlet />
-    </div>
+      <main className="pt-24">
+        <Outlet />
+      </main>
+    </>
   )
 }
 
