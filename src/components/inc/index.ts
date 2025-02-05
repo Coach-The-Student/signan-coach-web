@@ -1,5 +1,6 @@
 export { default as Card } from "./Card"
 export { default as HorizontalLine } from "./HorizontalLine"
 export { default as Loader } from "./Loader"
+export { default as Container } from "./Container"
 export * from "./Avatar"
 export * from "./Dropdown"

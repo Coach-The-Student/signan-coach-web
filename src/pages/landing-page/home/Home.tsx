@@ -1,7 +1,13 @@
+import { AchieveGoals, Hero, SubHero, WhyUs } from "./sections"
 
 function Home() {
   return (
-    <div>Home</div>
+    <>
+      <Hero />
+      <SubHero />
+      <WhyUs />
+      <AchieveGoals />
+    </>
   )
 }
 
