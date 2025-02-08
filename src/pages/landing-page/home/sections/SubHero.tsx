@@ -3,7 +3,7 @@ import DashboardImage from "@/assets/images/dashboard.svg"
 
 function SubHero() {
   return (
-    <section className="w-full">
+    <section className="w-full py-12">
       <div className="h-[50%] flex items-center justify-center">
         <img src={WaveImage} width="100%" />
       </div>

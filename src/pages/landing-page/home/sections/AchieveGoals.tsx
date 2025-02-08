@@ -1,4 +1,4 @@
-import { Container } from '@/components/inc'
+import { Container, Icon } from '@/components/inc'
 import AchieveGoalsImage from "@/assets/images/achieve-goals.svg"
 import SchedulingImage from "@/assets/images/scheduling.svg"
 import TrackProgress from "@/assets/images/track-progress.svg"
@@ -19,8 +19,14 @@ function AchieveGoals() {
             </p>
           </div>
           <div className='flex gap-4 w-2/3'>
-            <Button size="lg" className='w-full bg-black rounded-none'>Get From Playstore</Button>
-            <Button size="lg" className='w-full bg-black rounded-none'>Get On Appstore</Button>
+            <Button size="lg" variant="ghost" className='w-full bg-black text-white rounded-none hover:opacity-80'>
+              <Icon name="playstore" />
+              Get From Playstore
+            </Button>
+            <Button size="lg" variant="ghost" className='w-full bg-black text-white rounded-none hover:opacity-80'>
+              <Icon name="appstore" />
+              Get On Appstore
+            </Button>
           </div>
         </div>
         <img src={AchieveGoalsImage} width={400} />

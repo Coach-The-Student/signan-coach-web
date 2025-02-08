@@ -1,3 +1,4 @@
+import { LayoutFooter } from "@/layouts";
 import { lazy } from "react";
 import { Routes, Route } from "react-router";
 
@@ -18,7 +19,9 @@ function Router() {
     <Routes>
       {/* landing page */}
       <Route element={<LayoutHeader />}>
-        <Route path="" element={<Home />} />
+        <Route element={<LayoutFooter />}>
+          <Route path="" element={<Home />} />
+        </Route>
       </Route>
 
       {/* auth */}
