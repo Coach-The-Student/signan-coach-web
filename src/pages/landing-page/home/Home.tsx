@@ -1,4 +1,4 @@
-import { AchieveGoals, Hero, SubHero, WhyUs } from "./sections"
+import { AchieveGoals, FAQs, GlobalImpact, Hero, SubHero, WhyUs } from "./sections"
 
 function Home() {
   return (
@@ -7,6 +7,8 @@ function Home() {
       <SubHero />
       <WhyUs />
       <AchieveGoals />
+      <FAQs />
+      <GlobalImpact />
     </>
   )
 }

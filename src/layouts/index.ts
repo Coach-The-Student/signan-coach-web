@@ -1,5 +1,6 @@
 export { default as LayoutHeader } from "./LayoutHeader"
 export { default as LayoutDashboardHeader } from "./LayoutDashboardHeader"
 export { default as LayoutDashboardSidebar } from "./LayoutDashboardSidebar"
+export { default as LayoutFooter } from "./LayoutFooter"
 export { default as LayoutDashboardTabbar } from "./LayoutDashboardTabbar"
 export { default as data } from "./data.json"
