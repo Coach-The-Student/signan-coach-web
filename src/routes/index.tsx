@@ -31,7 +31,7 @@ function Router() {
       </Route>
 
       {/* auth */}
-      <Route path="/dashboard">
+      <Route path="/">
         <Route element={<LayoutAuth />}>
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
