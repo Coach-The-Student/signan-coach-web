@@ -1,7 +1,7 @@
 import { LayoutFooter } from "@/layouts";
 import CoachOrClient from "@/pages/auth/CoachOrClient";
 import { lazy } from "react";
-import { Routes, Route } from "react-router";
+import { Route, Routes } from "react-router";
 
 const Home = lazy(() => import("@/pages/landing-page/home/Home"));
 const Dashboard = lazy(() => import('@/pages/dashboard/Dashboard'));
@@ -50,7 +50,7 @@ function Router() {
         </Route>
       </Route>
     </Routes>
-  )
+  );
 }
 
-export default Router
+export default Router;
