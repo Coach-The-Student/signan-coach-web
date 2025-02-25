@@ -6,7 +6,7 @@ function Register() {
 
   const handleSubmit = (e:any) => {
     e.preventDefault()
-    navigate("/verify-email")
+    navigate("/dashboard/verify-email")
   }
 
   return (
@@ -27,7 +27,7 @@ function Register() {
       <div className="flex flex-col items-center gap-2 text-sm">
         <p className="text-center">
           <span className="text-grey-text">Already have an account?</span>
-          <Link to="/login" className="text-primary text-center text-sm ml-1">Login</Link>
+          <Link to="/dashboard/login" className="text-primary text-center text-sm ml-1">Login</Link>
         </p>
       </div>
     </>

@@ -4,3 +4,5 @@ export const BREAK_POINTS = {
   lg: 1440,
   xl: 2560
 }
+
+export const PRIMARY_COLOR = "#0052CC"

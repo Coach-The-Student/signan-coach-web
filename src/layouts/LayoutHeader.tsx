@@ -1,9 +1,11 @@
 import Logo from "@/assets/logo.png"
 import { Button } from "@/components/base"
-import { NavLink, Outlet } from "react-router-dom"
+import { NavLink, Outlet, useNavigate } from "react-router-dom"
 import { data } from "."
 
 function LayoutHeader() {
+  const navigate = useNavigate()
+
   return (
     <>
       <header className="fixed top-4 px-24 w-full">
@@ -30,8 +32,8 @@ function LayoutHeader() {
               ))}
             </ul>
             <div className="flex gap-2">
-              <Button variant="grey" className="rounded-full px-6">Login</Button>
-              <Button className="rounded-full">Get started</Button>
+              <Button variant="grey" className="rounded-full px-6" onClick={() => navigate("/dashboard/coach-or-client")}>Login</Button>
+              <Button className="rounded-full" onClick={() => navigate("/dashboard/coach-or-client?type=new_user")}>Get started</Button>
             </div>
           </nav>
         </div>

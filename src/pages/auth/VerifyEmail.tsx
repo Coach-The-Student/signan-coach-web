@@ -10,7 +10,7 @@ function VerifyEmail() {
 
   const handleSubmit = (e:any) => {
     e.preventDefault()
-    navigate("/")
+    navigate("/dashboard")
   }
 
   return (
@@ -32,7 +32,7 @@ function VerifyEmail() {
         <p className="text-sm font-medium pl-2">Didn't recieve OTP? Resend in 2:00</p>
         <Button type="submit" size="lg" className="mt-4">Continue</Button>
       </form>
-      <Link to="/register" className="text-primary text-center text-sm">Back to registration page</Link>
+      <Link to="/dashboard/register" className="text-primary text-center text-sm">Back to registration page</Link>
     </>
   )
 }

@@ -1,4 +1,5 @@
 import { LayoutFooter } from "@/layouts";
+import CoachOrClient from "@/pages/auth/CoachOrClient";
 import { lazy } from "react";
 import { Routes, Route } from "react-router";
 
@@ -13,6 +14,8 @@ const LayoutAuth = lazy(() => import('@/pages/auth/layouts/LayoutAuth'));
 const LayoutDashboardHeader = lazy(() => import('@/layouts/LayoutDashboardHeader'));
 const LayoutHeader = lazy(() => import('@/layouts/LayoutHeader'));
 const LayoutDashboardSidebar = lazy(() => import('@/layouts/LayoutDashboardSidebar'));
+const BecomeCoach = lazy(() => import('@/pages/landing-page/become-coach/BecomeCoach'));
+const FindCoach = lazy(() => import('@/pages/landing-page/find-coach/FindCoach'));
 
 function Router() {
   return (
@@ -21,12 +24,15 @@ function Router() {
       <Route element={<LayoutHeader />}>
         <Route element={<LayoutFooter />}>
           <Route path="" element={<Home />} />
+          <Route path="/become-coach" element={<BecomeCoach />} />
+          <Route path="/find-coach" element={<FindCoach />} />
         </Route>
       </Route>
 
       {/* auth */}
       <Route path="/dashboard">
         <Route element={<LayoutAuth />}>
+          <Route path="coach-or-client" element={<CoachOrClient />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
           <Route path="verify-email" element={<VerifyEmail />} />
