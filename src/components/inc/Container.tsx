@@ -1,19 +1,18 @@
-import React from 'react'
+import React, { forwardRef } from "react";
 
 interface Props {
   children: React.ReactNode;
-  className?:string
+  className?: string;
 }
 
-function Container({
-  children,
-  className
-}: Props) {
-  return (
-    <section className={`w-full max-w-[2024px] px-44 ${className}`}>
-      {children}
-    </section>
-  )
-}
+const Container = forwardRef<HTMLDivElement, Props>(
+  ({ children, className }, ref) => {
+    return (
+      <section ref={ref} className={`w-full max-w-[2024px] px-44 ${className}`}>
+        {children}
+      </section>
+    );
+  }
+);
 
-export default Container
+export default Container;
