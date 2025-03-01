@@ -8,7 +8,7 @@ function LayoutHeader() {
 
   return (
     <>
-      <header className="fixed top-4 px-24 w-full">
+      <header className="mt-8 px-44 w-full">
         <div className="flex justify-between items-center w-full py-2 px-8 shadow-md rounded-full bg-white">
           <div className="flex items-center gap-2">
             <img src={Logo} />

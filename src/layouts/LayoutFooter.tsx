@@ -7,7 +7,7 @@ function LayoutFooter() {
   return (
     <>
       <Outlet />
-      <footer className="px-24 py-12 flex flex-col gap-24">
+      <footer className="px-44 py-12 flex flex-col gap-24">
         <div className="w-full p-12 rounded-xl text-white flex flex-col gap-4 items-center text-center" style={{background: "linear-gradient(45deg, black, #0052CC, #0052CC)"}}>
           <h4 className="font-bold text-2xl">Ready to Achieve Your Goals?</h4>
           <p>

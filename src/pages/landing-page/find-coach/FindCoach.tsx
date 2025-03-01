@@ -27,7 +27,7 @@ function FindCoach() {
   ]
 
   return (
-    <Container className="my-44 px-44 flex flex-col gap-8">
+    <Container className="my-16 px-44 flex flex-col gap-10">
       <div className="flex flex-col items-center text-center gap-2">
         <h2 className="text-xl font-bold">Independent Coaches (1500)</h2>
         <p className="text-sm">

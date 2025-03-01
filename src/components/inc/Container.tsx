@@ -10,7 +10,7 @@ function Container({
   className
 }: Props) {
   return (
-    <section className={`w-full max-w-[2024px] px-24 ${className}`}>
+    <section className={`w-full max-w-[2024px] px-44 ${className}`}>
       {children}
     </section>
   )

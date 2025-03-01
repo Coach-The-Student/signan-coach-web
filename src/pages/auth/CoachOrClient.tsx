@@ -9,7 +9,7 @@ function CoachOrClient() {
 
   return (
     <div className='flex flex-col gap-12 text-center'>
-      <button className='flex flex-col gap-2 p-6 bg-secondary items-center rounded-lg'>
+      <button className='flex flex-col gap-2 p-6 bg-secondary items-center rounded-lg' onClick={() => navigate("/find-coach")}>
         <Icon name="as_client" bg={PRIMARY_COLOR} className="rounded-full" size={30} padding={20} />
         <h4 className='text-lg font-bold'>Proceed as a Client</h4>
         <p className='text-sm'>

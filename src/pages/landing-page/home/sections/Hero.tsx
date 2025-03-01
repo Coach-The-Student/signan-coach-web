@@ -7,10 +7,10 @@ function Hero() {
   const navigate = useNavigate();
 
   return (
-    <Container className="min-h-screen flex items-center justify-between pt-24 px-44">
+    <Container className="min-h-screen flex items-center justify-between px-44">
       <div className="flex flex-col items-start gap-8">
         <div className="flex flex-col gap-5">
-          <h2 className="text-6xl font-semibold">
+          <h2 className="text-6xl font-bold">
             Empowering Lives
             <br />
             Through Coaching
@@ -27,7 +27,7 @@ function Hero() {
           Get Started
         </Button>
         <div>
-          <p className="text-sm font-medium">
+          <p className="text-sm">
             Trusted by 300K+ organizations worldwide
           </p>
         </div>

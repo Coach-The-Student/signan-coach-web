@@ -4,7 +4,7 @@ import { Button } from '@/components/base'
 
 function GlobalImpact() {
   return (
-    <Container className='flex items-center py-12 px-32'>
+    <Container className='flex items-center py-12'>
       <div className='w-full flex flex-col gap-6 items-start'>
         <h3 className='text-2xl font-bold'>
           Make a Global Impact as a<br />
