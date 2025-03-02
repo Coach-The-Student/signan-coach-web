@@ -30,12 +30,12 @@ function AchieveGoals() {
   return (
     <Container ref={ref} className="flex flex-col gap-6 my-12">
       <motion.div
-        className="bg-secondary p-16 pb-0 rounded-lg flex items-center"
+        className="bg-secondary gap-6 pb-0 rounded-lg flex items-center justify-between"
         variants={containerVariants}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
       >
-        <div className="flex flex-col justify-between gap-24">
+        <div className="w-1/2 flex flex-col justify-center gap-6 pl-16">
           <motion.div className="flex flex-col gap-6" variants={itemVariants}>
             <h3 className="text-3xl font-bold">
               Achieve your goals
@@ -67,11 +67,12 @@ function AchieveGoals() {
             </Button>
           </motion.div>
         </div>
-        <motion.img
-          src={AchieveGoalsImage}
-          width={400}
-          variants={itemVariants}
-        />
+        <motion.div variants={itemVariants} className="w-1/2 flex justify-center pt-16">
+          <img
+            src={AchieveGoalsImage}
+            width={400}
+          />
+        </motion.div>
       </motion.div>
       <div className="flex gap-6">
         <motion.div

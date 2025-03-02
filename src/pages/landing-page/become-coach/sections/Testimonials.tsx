@@ -1,30 +1,8 @@
 import { Avatar, AvatarFallback, AvatarImage, Icon } from "@/components/inc";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0 },
-};
-
 function Testimonials() {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
-
-  const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        when: "beforeChildren",
-        staggerChildren: 0.3,
-      },
-    },
-  };
-
   const items = [
     {
       imageUrl: "https://randomuser.me/api/portraits/men/1.jpg",
@@ -119,38 +97,31 @@ function Testimonials() {
   };
 
   return (
-    <section ref={ref} className="py-16 flex flex-col gap-6">
-      <motion.h3
+    <section className="py-16 flex flex-col gap-6">
+      <h3
         className="text-xl font-semibold text-center"
-        variants={itemVariants}
-        initial="hidden"
-        animate={inView ? "visible" : "hidden"}
       >
         Testimonials from other
         <br />
         successful Coaches
-      </motion.h3>
-      <motion.div
+      </h3>
+      <div
         className="mt-8"
-        variants={containerVariants}
-        initial="hidden"
-        animate={inView ? "visible" : "hidden"}
       >
-        <Carousel responsive={responsive} className="pl-44" infinite={true}>
+        <Carousel responsive={responsive} className="pl-44 pb-24" infinite={true} arrows={false} customButtonGroup={<ButtonGroup />}>
           {items.map((item, index) => (
             <Item key={index} {...item} />
           ))}
         </Carousel>
-      </motion.div>
+      </div>
     </section>
   );
 }
 
 function Item({ imageUrl, name, role, testimonial }: any) {
   return (
-    <motion.div
+    <div
       className="flex flex-col gap-4 w-[500px] pl-4"
-      variants={itemVariants}
     >
       <div className="flex items-end gap-3">
         <Avatar className="rounded-lg w-24 h-24">
@@ -166,8 +137,22 @@ function Item({ imageUrl, name, role, testimonial }: any) {
         <Icon name="quotes" size={35} />
         <p>{testimonial}</p>
       </div>
-    </motion.div>
+    </div>
   );
 }
+
+const ButtonGroup = ({ next, previous, goToSlide, ...rest }:any) => {
+  const { carouselState: { currentSlide } } = rest;
+  return (
+    <div className="carousel-button-group absolute bottom-0 right-44 flex gap-12">
+      <button className={currentSlide === 0 ? 'disable' : ""} onClick={() => previous()}>
+        <Icon name="arrow_lesser_black" size={40} />
+      </button>
+      <button onClick={() => next()}>
+        <Icon name="arrow_greater_black" size={40} />
+      </button>
+    </div>
+  );
+};
 
 export default Testimonials;

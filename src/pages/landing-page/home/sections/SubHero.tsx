@@ -42,6 +42,7 @@ function SubHero() {
         </motion.h3>
         <motion.img
           src={DashboardImage}
+          width="50%"
           className="mt-14"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={inView ? { opacity: 1, scale: 1 } : {}}

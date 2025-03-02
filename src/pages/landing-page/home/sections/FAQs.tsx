@@ -1,35 +1,47 @@
 import { Container, Icon } from '@/components/inc'
 import { useState } from 'react'
+import FAQImage from "@/assets/images/faq.svg"
 
 function FAQs() {
   const faqs = [
     {
-      question: "How do I get started with Signan Solution ",
+      question: "How do I get started with Signan Solution?",
       answer: "Our platform is designed to connect clients with expert coaches across various fields, ensuring you get the right guidance tailored to your personal and professional growth. With an easy-to-use interface, you can sign up in minutes, explore a diverse directory of certified coaches, filter by expertise and availability, and choose the best fit for your needs."
     },
     {
-      question: "Who are you",
-      answer: "Our platform is designed to connect clients with expert coaches across various fields, ensuring you get the right guidance tailored to your personal and professional growth. With an easy-to-use interface, you can sign up in minutes, explore a diverse directory of certified coaches, filter by expertise and availability, and choose the best fit for your needs."
+      question: "What types of coaching services are offered on Signan Solution?",
+      answer: "Signan Solution offers a wide range of coaching services, including career coaching, executive coaching, life coaching, health and wellness coaching, leadership development, and more. Our platform ensures that there is a coach for every personal and professional need."
     },
     {
-      question: "Who are you",
-      answer: "Our platform is designed to connect clients with expert coaches across various fields, ensuring you get the right guidance tailored to your personal and professional growth. With an easy-to-use interface, you can sign up in minutes, explore a diverse directory of certified coaches, filter by expertise and availability, and choose the best fit for your needs."
+      question: "How do I choose the right coach for me?",
+      answer: "Choosing the right coach is simple on our platform. You can filter coaches by their expertise, availability, coaching style, and ratings. Additionally, each coach’s profile includes detailed information about their qualifications, experience, and client feedback to help you make an informed decision."
     },
     {
-      question: "Who are you",
-      answer: "Our platform is designed to connect clients with expert coaches across various fields, ensuring you get the right guidance tailored to your personal and professional growth. With an easy-to-use interface, you can sign up in minutes, explore a diverse directory of certified coaches, filter by expertise and availability, and choose the best fit for your needs."
+      question: "How do I book a session with a coach?",
+      answer: "Once you've selected a coach, simply check their availability on their profile page. You can then book a session directly through the platform. Payment and session scheduling are streamlined to ensure a smooth experience."
     },
-  ]
+    {
+      question: "What if I need to reschedule or cancel a coaching session?",
+      answer: "We understand that schedules can change. If you need to reschedule or cancel a session, you can do so up to 24 hours before the scheduled session without penalty. After this period, our cancellation policy will apply."
+    },
+    {
+      question: "Is there a way to track my progress with my coach?",
+      answer: "Yes! Our platform allows you to track your coaching progress through notes, session summaries, and goal-setting tools. You can collaborate with your coach to set measurable milestones and monitor improvements over time."
+    },
+  ];
+  
 
 
   return (
     <Container className='flex flex-col items-center py-16'>
-      <div></div>
-      <h3 className='text-2xl font-bold text-center'>Answers Await: Frequently Asked Questions </h3>
+      <img src={FAQImage} width={250} />
+      <h3 className='text-2xl font-bold text-center mt-2'>Answers Await: Frequently Asked Questions </h3>
       <p className="text-center mt-1">Unlock Answers to Your Queries: Navigating the Uickly Experience with Confidence and Clarity</p>
       <ul className='w-full mt-6 flex flex-col gap-4'>
         {faqs.map((faq, index) => (
-          <FAQ key={index} {...faq} />
+          <li>
+            <FAQ key={index} {...faq} />
+          </li>
         ))}
       </ul>
     </Container>
@@ -43,7 +55,7 @@ const FAQ = ({
   const [open, setOpen] = useState(false)
 
   return (
-    <li className='px-8 py-6 border w-full flex flex-col gap-4 rounded-lg'>
+    <button className='px-8 py-5 border w-full flex flex-col gap-4 rounded-lg' onClick={() => setOpen(prev => !prev)}>
       <div className='flex justify-between items-center px-2'>
         <div>
           <h5 className='text-md flex gap-4 items-center'>
@@ -51,12 +63,12 @@ const FAQ = ({
             {question}
           </h5>
         </div>
-        <button onClick={(() => setOpen(prev => !prev))} className='text-6xl'>
+        {/* <button onClick={(() => setOpen(prev => !prev))} className='text-6xl'> */}
           <Icon name={open ? "minus" : "add"} />
-        </button>
+        {/* </button> */}
       </div>
-      {open && <p className='text-sm text-grey-text'>{answer}</p>}
-    </li>
+      {open && <p className='text-sm text-grey-text text-left'>{answer}</p>}
+    </button>
   )
 }
 
