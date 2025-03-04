@@ -9,12 +9,18 @@ function LayoutHeader() {
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
     <>
       <header className="mt-8 px-4 md:px-8 lg:px-44 w-full">
         <div className="flex justify-between items-center w-full py-2 px-4 md:px-8 bg-white rounded-full shadow-none md:shadow-md">
           <div className="flex items-center gap-2">
-            <img src={Logo} className="w-8 h-8 md:w-10 md:h-10" />
+            <img
+              src={Logo}
+              className="w-8 h-8 md:w-10 md:h-10"
+              alt="Signan Solution Logo"
+            />
             <h1 className="font-bold text-sm md:text-lg">Signan Solution</h1>
           </div>
           <nav className="hidden md:flex gap-8">
@@ -45,13 +51,13 @@ function LayoutHeader() {
             <div className="flex gap-2">
               <Button
                 variant="grey"
-                className="rounded-full px-6"
-                onClick={() => navigate("/dashboard/coach-or-client")}
+                className="rounded-full px-6 text-sm md:text-base"
+                onClick={() => navigate("/auth/login")}
               >
                 Login
               </Button>
               <Button
-                className="rounded-full"
+                className="rounded-full px-6 text-sm md:text-base"
                 onClick={() =>
                   navigate("/dashboard/coach-or-client?type=new_user")
                 }
@@ -62,12 +68,12 @@ function LayoutHeader() {
           </nav>
           <div className="md:hidden">
             <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
-              <Icon name="menu" size={24} />
+              <Icon name={isMenuOpen ? "menu" : "menu"} size={24} />
             </button>
           </div>
         </div>
         {isMenuOpen && (
-          <nav className="md:hidden mt-4">
+          <nav className="md:hidden mt-4 bg-white rounded-lg shadow-md px-4 py-6 transition-all duration-300 ease-in-out">
             <ul className="flex flex-col items-center gap-4">
               {data.navs.map((nav) => (
                 <li key={nav.href}>
@@ -78,6 +84,7 @@ function LayoutHeader() {
                         isActive && "bg-grey-light border text-grey-text"
                       } relative text-[#4D4D4D] w-full py-2 px-4 rounded-full text-sm font-medium flex flex-col items-center gap-4`
                     }
+                    onClick={closeMenu}
                     children={({ isActive }) => (
                       <>
                         <span>{nav.title}</span>
@@ -92,19 +99,23 @@ function LayoutHeader() {
                 </li>
               ))}
             </ul>
-            <div className="flex flex-col items-center gap-2 mt-4">
+            <div className="flex flex-col items-center gap-2 mt-6">
               <Button
                 variant="grey"
-                className="rounded-full px-6"
-                onClick={() => navigate("/dashboard/coach-or-client")}
+                className="rounded-full px-6 w-full max-w-[200px] text-sm"
+                onClick={() => {
+                  navigate("/dashboard/coach-or-client");
+                  closeMenu();
+                }}
               >
                 Login
               </Button>
               <Button
-                className="rounded-full"
-                onClick={() =>
-                  navigate("/dashboard/coach-or-client?type=new_user")
-                }
+                className="rounded-full px-6 w-full max-w-[200px] text-sm"
+                onClick={() => {
+                  navigate("/dashboard/coach-or-client?type=new_user");
+                  closeMenu();
+                }}
               >
                 Get started
               </Button>

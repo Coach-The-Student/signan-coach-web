@@ -48,9 +48,12 @@ function CoachingPrograms() {
   ];
 
   return (
-    <Container ref={ref} className="py-10 flex flex-col gap-2">
+    <Container
+      ref={ref}
+      className="py-10 max-sm:py-6 flex flex-col gap-2 max-sm:gap-1"
+    >
       <motion.h1
-        className="text-3xl font-bold text-center"
+        className="text-3xl max-sm:text-xl md:text-2xl lg:text-3xl font-bold text-center"
         variants={itemVariants}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
@@ -58,7 +61,7 @@ function CoachingPrograms() {
         Our Coaching Programs
       </motion.h1>
       <motion.p
-        className="text-center"
+        className="text-base max-sm:text-sm md:text-base text-center"
         variants={itemVariants}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
@@ -68,7 +71,7 @@ function CoachingPrograms() {
         coaching together!
       </motion.p>
       <motion.div
-        className="grid grid-cols-2 gap-6 mt-8"
+        className="grid grid-cols-1 max-sm:gap-4 md:grid-cols-2 gap-6 mt-8 max-sm:mt-6"
         variants={containerVariants}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
@@ -95,10 +98,15 @@ function Item({
       className="w-full bg-[#6FB1FC] flex items-end border border-[#6FB1FC] rounded-lg overflow-hidden"
       variants={variants}
     >
-      <Icon name="arrow_right" bg={PRIMARY_COLOR} size={20} className="!w-12" />
-      <div className="w-full h-44 flex flex-col gap-1 justify-center bg-white px-6">
-        <h2 className="font-semibold">{title}</h2>
-        <p className="text-sm">{description}</p>
+      <Icon
+        name="arrow_right"
+        bg={PRIMARY_COLOR}
+        size={20}
+        className="!w-12 max-sm:!w-10"
+      />
+      <div className="w-full h-44 max-sm:h-36 flex flex-col gap-1 justify-center bg-white px-6 max-sm:px-4">
+        <h2 className="font-semibold text-base max-sm:text-sm">{title}</h2>
+        <p className="text-sm max-sm:text-xs">{description}</p>
       </div>
     </motion.div>
   );

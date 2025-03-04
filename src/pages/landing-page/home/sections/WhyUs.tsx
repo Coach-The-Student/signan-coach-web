@@ -17,34 +17,36 @@ function WhyUs() {
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.5 }}
       >
-        <h3 className="text-2xl font-bold text-center">
+        <h3 className="text-2xl max-sm:-mt-10 font-bold text-center">
           Why We are the right choice for you
         </h3>
-        <p className="text-center mt-1">
+        <p className="text-center mt-1 ">
           Our team of dedicated professionals works tirelessly to ensure that
           you
           <br />
           receive the best possible experience
         </p>
       </motion.div>
-      <div className="grid grid-cols-2 md:grid-cols-3 grid-rows-3 md:grid-rows-2 w-full h-full gap-1 max-sm:gap-1 lg:gap-6 text-white">
+      <div className="grid grid-cols-2 md:grid-cols-3 grid-rows-3 md:grid-rows-2  max-sm:-mt-20 w-full h-full gap-4 max-sm:gap-2 lg:gap-6 text-white">
         <motion.div
-          className="bg-primary rounded-lg max-sm:rounded-[32px] p-2 lg:p-8 max-sm:p-6 max-sm:h-fit flex flex-col gap-4 col-span-2 md:col-span-1"
+          className="bg-primary rounded-lg max-sm:rounded-[32px] p-4 lg:p-8 max-sm:p-4 max-sm:pb-5 max-sm:h-fit max-sm:mt-24 flex flex-col gap-4 col-span-2 md:col-span-1"
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <Icon name="graph" size={50} />
           <div className="text-white">
-            <h4 className="font-medium text-lg">Develop Your Coaching</h4>
-            <p className="text-sm mt-2">
+            <h4 className="font-medium text-lg max-sm:text-sm">
+              Develop Your Coaching
+            </h4>
+            <p className="text-sm mt-2 max-sm:text-[10px]">
               Join thousands of coaches live each week as industry thought
               leaders explore the leading edge of coaching
             </p>
           </div>
         </motion.div>
         <motion.div
-          className="bg-primary rounded-lg max-sm:rounded-[32px] max-sm:h-fit max-sm:p-4 p-2 lg:p-8 flex flex-col gap-4 col-span-1"
+          className="bg-primary rounded-lg max-sm:rounded-[32px] p-4 lg:p-8 max-sm:p-4 flex flex-col gap-4 col-span-1"
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.4 }}
@@ -62,7 +64,7 @@ function WhyUs() {
           </div>
         </motion.div>
         <motion.div
-          className="bg-[#00398F] rounded-lg max-sm:rounded-[32px] max-sm:p-4 p-2 lg:p-8 flex flex-col items-start justify-between row-span-2 col-span-1 md:col-span-1"
+          className="bg-[#00398F] rounded-lg max-sm:rounded-[32px] p-4 lg:p-8 max-sm:p-4 flex flex-col items-start justify-between row-span-2 col-span-1 md:col-span-1"
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.6 }}
@@ -93,7 +95,7 @@ function WhyUs() {
           </Button>
         </motion.div>
         <motion.div
-          className="bg-primary rounded-lg p-2 lg:p-8 max-sm:rounded-[32px] flex flex-col gap-4 col-span-1 md:col-span-2"
+          className="bg-primary rounded-lg p-4 lg:p-8 max-sm:rounded-[32px] max-sm:p-4 flex flex-col gap-4 col-span-1 md:col-span-2"
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.8 }}

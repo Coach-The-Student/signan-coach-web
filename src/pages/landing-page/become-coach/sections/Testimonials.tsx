@@ -78,7 +78,6 @@ function Testimonials() {
 
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5,
     },
@@ -97,18 +96,20 @@ function Testimonials() {
   };
 
   return (
-    <section className="py-16 flex flex-col gap-6">
-      <h3
-        className="text-xl font-semibold text-center"
-      >
+    <section className="py-16 max-sm:py-8 flex flex-col gap-6 max-sm:gap-4">
+      <h3 className="text-xl max-sm:text-lg md:text-xl lg:text-xl font-semibold text-center">
         Testimonials from other
         <br />
         successful Coaches
       </h3>
-      <div
-        className="mt-8"
-      >
-        <Carousel responsive={responsive} className="pl-44 pb-24" infinite={true} arrows={false} customButtonGroup={<ButtonGroup />}>
+      <div className="mt-8 max-sm:mt-6">
+        <Carousel
+          responsive={responsive}
+          className="pl-44 max-sm:pl-4 pb-24 max-sm:pb-16"
+          infinite={true}
+          arrows={false}
+          customButtonGroup={<ButtonGroup />}
+        >
           {items.map((item, index) => (
             <Item key={index} {...item} />
           ))}
@@ -120,36 +121,39 @@ function Testimonials() {
 
 function Item({ imageUrl, name, role, testimonial }: any) {
   return (
-    <div
-      className="flex flex-col gap-4 w-[500px] pl-4"
-    >
+    <div className="flex flex-col gap-4 w-[500px] max-sm:w-[300px] pl-4 max-sm:pl-2">
       <div className="flex items-end gap-3">
-        <Avatar className="rounded-lg w-24 h-24">
+        <Avatar className="rounded-lg w-24 h-24 max-sm:w-16 max-sm:h-16">
           <AvatarImage src={imageUrl} alt={name} className="!rounded-lg" />
           <AvatarFallback className="rounded-lg">CN</AvatarFallback>
         </Avatar>
         <div>
-          <h4 className="text-sm font-semibold">{name}</h4>
-          <span className="text-sm">{role}</span>
+          <h4 className="text-sm max-sm:text-xs font-semibold">{name}</h4>
+          <span className="text-sm max-sm:text-xs">{role}</span>
         </div>
       </div>
-      <div className="p-6 bg-secondary flex flex-col gap-2 h-[200px] rounded-md">
-        <Icon name="quotes" size={35} />
-        <p>{testimonial}</p>
+      <div className="p-6 max-sm:p-4 bg-secondary flex flex-col gap-2 h-[200px] max-sm:h-[150px] rounded-md">
+        <Icon name="quotes" size={35} className="max-sm:size-6" />
+        <p className="text-sm max-sm:text-xs">{testimonial}</p>
       </div>
     </div>
   );
 }
 
-const ButtonGroup = ({ next, previous, goToSlide, ...rest }:any) => {
-  const { carouselState: { currentSlide } } = rest;
+const ButtonGroup = ({ next, previous, goToSlide, ...rest }: any) => {
+  const {
+    carouselState: { currentSlide },
+  } = rest;
   return (
-    <div className="carousel-button-group absolute bottom-0 right-44 flex gap-12">
-      <button className={currentSlide === 0 ? 'disable' : ""} onClick={() => previous()}>
-        <Icon name="arrow_lesser_black" size={40} />
+    <div className="carousel-button-group absolute bottom-0 right-44 max-sm:right-4 flex gap-12 max-sm:gap-6">
+      <button
+        className={currentSlide === 0 ? "disable" : ""}
+        onClick={() => previous()}
+      >
+        <Icon name="arrow_lesser_black" size={40} className="max-sm:size-8" />
       </button>
       <button onClick={() => next()}>
-        <Icon name="arrow_greater_black" size={40} />
+        <Icon name="arrow_greater_black" size={40} className="max-sm:size-8" />
       </button>
     </div>
   );
