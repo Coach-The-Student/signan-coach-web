@@ -14,10 +14,10 @@ function SubHero() {
         animate={inView ? { opacity: 1 } : {}}
         transition={{ duration: 0.5 }}
       >
-        <img src={WaveImage} width="100%" />
+        <img src={WaveImage} className="w-full" />
       </motion.div>
       <motion.div
-        className="flex flex-col items-center gap-1 -mt-[12.5%] bg-[#EBF2FB] pt-6 pb-14"
+        className="flex flex-col items-center gap-1 -mt-8 sm:-mt-12 md:-mt-16 bg-[#EBF2FB] pt-6 pb-14"
         initial={{ opacity: 0, y: 50 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.5, delay: 0.2 }}
@@ -31,7 +31,7 @@ function SubHero() {
           Ready to Get Started?
         </motion.h5>
         <motion.h3
-          className="text-2xl font-bold text-center"
+          className="text-xl sm:text-2xl md:text-3xl font-bold text-center"
           initial={{ opacity: 0, y: -20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.6 }}
@@ -42,8 +42,7 @@ function SubHero() {
         </motion.h3>
         <motion.img
           src={DashboardImage}
-          width="50%"
-          className="mt-14"
+          className="mt-8 sm:mt-10 md:mt-14 w-11/12 sm:w-3/4 md:w-1/2"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={inView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 0.5, delay: 0.8 }}
