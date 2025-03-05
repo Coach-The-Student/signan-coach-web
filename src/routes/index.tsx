@@ -4,18 +4,30 @@ import { lazy } from "react";
 import { Route, Routes } from "react-router";
 
 const Home = lazy(() => import("@/pages/landing-page/home/Home"));
-const Dashboard = lazy(() => import('@/pages/dashboard/Dashboard'));
-const ConfirmEmail = lazy(() => import('@/pages/auth/resetPassword/ConfirmEmail'));
-const Login = lazy(() => import('@/pages/auth/Login'));
-const NewPassword = lazy(() => import('@/pages/auth/resetPassword/NewPassword'));
-const Register = lazy(() => import('@/pages/auth/Register'));
-const VerifyEmail = lazy(() => import('@/pages/auth/VerifyEmail'));
-const LayoutAuth = lazy(() => import('@/pages/auth/layouts/LayoutAuth'));
-const LayoutDashboardHeader = lazy(() => import('@/layouts/LayoutDashboardHeader'));
-const LayoutHeader = lazy(() => import('@/layouts/LayoutHeader'));
-const LayoutDashboardSidebar = lazy(() => import('@/layouts/LayoutDashboardSidebar'));
-const BecomeCoach = lazy(() => import('@/pages/landing-page/become-coach/BecomeCoach'));
-const FindCoach = lazy(() => import('@/pages/landing-page/find-coach/FindCoach'));
+const Dashboard = lazy(() => import("@/pages/dashboard/Dashboard"));
+const ConfirmEmail = lazy(
+  () => import("@/pages/auth/resetPassword/ConfirmEmail")
+);
+const Login = lazy(() => import("@/pages/auth/Login"));
+const NewPassword = lazy(
+  () => import("@/pages/auth/resetPassword/NewPassword")
+);
+const Register = lazy(() => import("@/pages/auth/Register"));
+const VerifyEmail = lazy(() => import("@/pages/auth/VerifyEmail"));
+const LayoutAuth = lazy(() => import("@/pages/auth/layouts/LayoutAuth"));
+const LayoutDashboardHeader = lazy(
+  () => import("@/layouts/LayoutDashboardHeader")
+);
+const LayoutHeader = lazy(() => import("@/layouts/LayoutHeader"));
+const LayoutDashboardSidebar = lazy(
+  () => import("@/layouts/LayoutDashboardSidebar")
+);
+const BecomeCoach = lazy(
+  () => import("@/pages/landing-page/become-coach/BecomeCoach")
+);
+const FindCoach = lazy(
+  () => import("@/pages/landing-page/find-coach/FindCoach")
+);
 
 function Router() {
   return (
