@@ -1,5 +1,0 @@
-export { default as Hero } from "./Hero"
-export { default as HowTo } from "./HowTo"
-export { default as CoachingPrograms } from "./CoachingPrograms"
-export { default as MakeDifference } from "./MakeDifference"
-export { default as Testimonials } from "./Testimonials"
