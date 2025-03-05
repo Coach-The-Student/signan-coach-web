@@ -42,13 +42,18 @@ function VerifyEmail() {
       <form onSubmit={handleSubmit} className="flex flex-col gap-3">
         <OTPInput
           value={otp}
+          inputStyle={{
+            color: "#0052cc ",
+            width: "5rem",
+            height: "5rem",
+          }}
           onChange={setOtp}
           numInputs={4}
           renderSeparator={<div className="w-4" />}
           renderInput={(props) => (
             <input
               {...props}
-              className="border border-primary/30 px-5 py-2 rounded-lg"
+              className="border border-primary/30 px-5 py-2 text-primary placeholder:text-primary rounded-lg"
             />
           )}
         />
