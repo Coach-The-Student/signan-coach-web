@@ -1,0 +1,56 @@
+{
+  "navs": [
+    {
+      "title": "Home",
+      "href": "/"
+    },
+    {
+      "title": "Become a Coach",
+      "href": "/become-coach"
+    },
+    {
+      "title": "Find a Coach",
+      "href": "/find-coach"
+    },
+    {
+      "title": "Coaching Platform",
+      "href": "/coaching"
+    },
+    {
+      "title": "Pricing",
+      "href": "/pricing"
+    }
+  ],
+  "dashboard_navs": [
+    {
+      "title": "Dashboard",
+      "href": "",
+      "icon": "dashboard"
+    },
+    {
+      "title": "Engagements",
+      "href": "/engagements",
+      "icon": "engagements"
+    },
+    {
+      "title": "Resources",
+      "href": "/resources",
+      "icon": "resources"
+    },
+    {
+      "title": "Clients",
+      "href": "/clients",
+      "icon": "clients"
+    },
+    {
+      "title": "Report",
+      "href": "/report",
+      "icon": "report"
+    },
+    {
+      "title": "Settings",
+      "href": "/settings",
+      "icon": "settings"
+    }
+  ]
+}
