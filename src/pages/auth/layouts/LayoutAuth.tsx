@@ -21,7 +21,7 @@ function LayoutAuth() {
         </div>
       </aside>
       <main className="w-full md:w-3/4 lg:w-full flex flex-col items-center">
-        <div className="w-full md:w-3/4 lg:w-1/2 flex flex-col gap-6">
+        <div className="w-full md:w-3/4 lg:w-1/2 flex flex-col gap-6 relative">
           <Outlet />
         </div>
       </main>

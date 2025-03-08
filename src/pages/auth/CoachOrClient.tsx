@@ -34,7 +34,7 @@ function CoachOrClient() {
   return (
     <motion.div
       ref={ref}
-      className="flex flex-col gap-12 max-sm:gap-8 text-center px-4 sm:px-8 md:px-12 lg:px-16 py-12 max-sm:py-8"
+      className="flex flex-col lg:!p-0 lg:items-center gap-12 max-sm:gap-8 text-center px-4 sm:px-8 md:px-12 lg:px-16 py-12 max-sm:py-8"
       variants={containerVariants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
