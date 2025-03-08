@@ -50,10 +50,10 @@ function CoachingPrograms() {
   return (
     <Container
       ref={ref}
-      className="py-10 max-sm:py-6 flex flex-col gap-2 max-sm:gap-1"
+      className="py-10 max-sm:py-6 flex flex-col gap-2 max-sm:gap-1 lg:px-56"
     >
       <motion.h1
-        className="text-3xl max-sm:text-xl md:text-2xl lg:text-3xl font-bold text-center"
+        className="text-3xl max-sm:text-xl md:text-2xl lg:text-4xl font-bold text-center"
         variants={itemVariants}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
@@ -102,7 +102,7 @@ function Item({
         name="arrow_right"
         bg={PRIMARY_COLOR}
         size={20}
-        className="!w-12 max-sm:!w-10"
+        className="!w-16 max-sm:!w-10 !h-12"
       />
       <div className="w-full h-44 max-sm:h-36 flex flex-col gap-1 justify-center bg-white px-6 max-sm:px-4">
         <h2 className="font-semibold text-base max-sm:text-sm">{title}</h2>

@@ -89,7 +89,7 @@ function AchieveGoals() {
       <div className="flex flex-col md:flex-row gap-6">
         {/* Scheduling Section */}
         <motion.div
-          className="w-full bg-secondary p-6 md:p-16 pb-0 rounded-lg flex flex-col items-center justify-between gap-6"
+          className="w-full bg-secondary p-6 md:p-16 pb-0 md:pb-0 rounded-lg flex flex-col items-center justify-between gap-6"
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
@@ -118,7 +118,7 @@ function AchieveGoals() {
 
         {/* Track Progress Section */}
         <motion.div
-          className="w-full bg-secondary p-6 md:p-16 pb-0 rounded-lg flex flex-col items-center justify-between gap-6"
+          className="w-full bg-secondary p-6 md:p-16 pb-0 md:pb-0 rounded-lg flex flex-col items-center justify-between gap-6"
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}

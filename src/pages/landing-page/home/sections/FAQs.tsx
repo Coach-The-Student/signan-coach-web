@@ -38,7 +38,7 @@ function FAQs() {
   ];
 
   return (
-    <Container className="flex flex-col items-center py-10 max-sm:py-6">
+    <Container className="flex flex-col items-center py-10 max-sm:py-6 lg:px-56">
       <img
         src={FAQImage}
         alt="FAQ Illustration"
@@ -78,7 +78,7 @@ const FAQ = ({ question, answer }: { question: string; answer: string }) => {
         <Icon name={open ? "minus" : "add"} size={20} />
       </div>
       {open && (
-        <p className="text-xs max-sm:text-[10px] md:text-sm text-grey-text px-1 max-sm:px-0">
+        <p className="text-xs max-sm:text-[10px] md:text-sm text-grey-text px-1 max-sm:px-0 lg:pt-2">
           {answer}
         </p>
       )}

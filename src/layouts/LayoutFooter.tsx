@@ -7,10 +7,10 @@ function LayoutFooter() {
   return (
     <>
       <Outlet />
-      <TableFooter className="px-44 max-sm:px-4 py-12 flex flex-col gap-24 max-sm:gap-8">
+      <TableFooter className="px-44 max-sm:px-4 py-12 flex flex-col gap-24 max-sm:gap-8 lg:px-56 border-0">
         {/* CTA Section */}
         <div
-          className="w-full p-12 max-sm:p-6 rounded-xl text-white flex flex-col gap-4 max-sm:gap-3 items-center text-center"
+          className="w-full p-12 lg:py-14 max-sm:p-6 rounded-2xl text-white flex flex-col gap-4 max-sm:gap-3 items-center text-center"
           style={{
             background: "linear-gradient(45deg, black, #0052CC, #0052CC)",
           }}
@@ -24,7 +24,7 @@ function LayoutFooter() {
             transform your life today
           </p>
           <Button
-            className="bg-white text-grey-text font-bold mt-4 max-sm:mt-3 max-sm:text-sm"
+            className="bg-white text-grey-text font-bold mt-4 max-sm:mt-3 max-sm:text-sm max-sm:px-4 max-sm:h-10"
             pill
             size="lg"
           >

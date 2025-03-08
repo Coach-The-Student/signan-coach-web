@@ -27,7 +27,7 @@ function Hero() {
   return (
     <Container
       ref={ref}
-      className="w-full min-h-screen max-sm:min-h-fit py-16 max-sm:py-8 flex flex-col items-center gap-4 max-sm:gap-3"
+      className="w-full min-h-screen max-sm:min-h-fit py-16 lg:pt-48 max-sm:pt-28 max-sm:py-8 flex flex-col items-center gap-4 max-sm:gap-3"
     >
       <motion.div
         className="flex flex-col items-center gap-4 max-sm:gap-3"
@@ -36,7 +36,7 @@ function Hero() {
         animate={inView ? "visible" : "hidden"}
       >
         <motion.h1
-          className="text-4xl max-sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center"
+          className="text-4xl max-sm:text-2xl md:text-3xl lg:text-5xl font-bold text-center"
           variants={itemVariants}
         >
           Focus on coaching, while
@@ -44,7 +44,7 @@ function Hero() {
           we focus on the rest.
         </motion.h1>
         <motion.p
-          className="text-base max-sm:text-sm md:text-base text-center"
+          className="text-base max-sm:text-sm md:text-lg text-center"
           variants={itemVariants}
         >
           Your experience is valuable - set your rates,
@@ -53,7 +53,7 @@ function Hero() {
         </motion.p>
         <motion.img
           src={DashboardImage}
-          className="mt-14 max-sm:mt-8 w-full max-w-[90%] sm:max-w-[80%] md:max-w-[70%] lg:max-w-[60%] h-auto"
+          className="mt-14 max-sm:mt-8 w-full max-w-[90%] sm:max-w-[80%] md:max-w-[70%] lg:max-w-[100%] h-auto"
           alt="Dashboard Preview"
           variants={itemVariants}
         />

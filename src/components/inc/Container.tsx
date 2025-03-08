@@ -8,10 +8,7 @@ interface Props {
 const Container = forwardRef<HTMLDivElement, Props>(
   ({ children, className }, ref) => {
     return (
-      <section
-        ref={ref}
-        className={`w-full max-w-[2024px] px-4 md:px-8 lg:px-44 ${className}`}
-      >
+      <section ref={ref} className={`w-full max-w-[2024px] lg:px-44 px-4 ${className}`}>
         {children}
       </section>
     );

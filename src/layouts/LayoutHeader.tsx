@@ -13,7 +13,7 @@ function LayoutHeader() {
 
   return (
     <>
-      <header className="mt-8 px-4 md:px-8 lg:px-44 w-full">
+      <header className="absolute top-0 mt-8 px-4 md:px-8 lg:px-44 w-full">
         <div className="flex justify-between items-center w-full py-2 px-4 md:px-8 bg-white rounded-full shadow-none md:shadow-md">
           <div className="flex items-center gap-2">
             <img

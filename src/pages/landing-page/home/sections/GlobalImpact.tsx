@@ -28,10 +28,10 @@ function GlobalImpact() {
   return (
     <Container
       ref={ref}
-      className="flex max-sm:flex-col items-center py-12 max-sm:py-8"
+      className="flex max-sm:flex-col items-center justify-center py-12 max-sm:py-8 lg:px-56 lg:gap-10"
     >
       <motion.div
-        className="w-full max-sm:w-full lg:w-full flex flex-col gap-6 max-sm:gap-3 items-start"
+        className="w-full lg:w-[40%] max-sm:w-full flex flex-col gap-6 max-sm:gap-3 items-center lg:items-start"
         variants={containerVariants}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
@@ -45,7 +45,7 @@ function GlobalImpact() {
           Coach with Signan Solution
         </motion.h3>
         <motion.p
-          className="text-sm max-sm:text-[10px] w-2/3 max-sm:w-full"
+          className="text-sm max-sm:text-[10px] max-sm:w-full"
           variants={itemVariants}
         >
           Join a global network of professional coaches and expand your reach
@@ -62,7 +62,7 @@ function GlobalImpact() {
       <motion.img
         src={GlobalImpactImage}
         alt="Global Impact Illustration"
-        width="100%"
+        width="450"
         className="max-sm:max-w-full max-sm:mt-5"
         variants={itemVariants}
         initial="hidden"

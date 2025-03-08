@@ -23,15 +23,15 @@ function Coach({
   tags,
 }: Props) {
   return (
-    <div className="flex flex-col max-sm:flex-col md:flex-row gap-6 max-sm:gap-4 px-10 max-sm:px-4 py-6 max-sm:py-4 rounded-xl border-4 border-grey-card">
-      <Avatar className="w-24 h-24 max-sm:w-16 max-sm:h-16">
+    <div className="flex gap-4 lg:gap-6 max-sm:gap-4 px-10 max-sm:px-4 py-6 max-sm:py-4 rounded-xl border-4 border-grey-card">
+      <Avatar className="w-24 h-24 max-sm:w-12 max-sm:h-12">
         <AvatarImage src={photoURL} alt={name} className="!rounded-lg" />
         <AvatarFallback className="text-xl max-sm:text-base">
           {name[0]}
         </AvatarFallback>
       </Avatar>
       <div className="w-full flex flex-col gap-3 max-sm:gap-2">
-        <div className="flex flex-col max-sm:flex-col md:flex-row justify-between items-start md:items-center text-lg max-sm:text-base font-bold gap-2 md:gap-0">
+        <div className="flex justify-between items-start md:items-center text-lg max-sm:text-base font-bold gap-2 md:gap-0">
           <h4>{name}</h4>
           <h4>${price}</h4>
         </div>
@@ -51,12 +51,12 @@ function Coach({
           />
           <span>{yearsOfExperience} years of experience</span>
         </div>
-        <h5 className="text-lg max-sm:text-sm md:text-base lg:text-lg font-medium">
+        <h5 className="text-sm max-sm:text-xs md:text-base lg:text-lg lg:font-medium">
           {skill}
         </h5>
-        <p className="text-sm max-sm:text-xs">{about}</p>
-        <div className="flex flex-col max-sm:flex-col md:flex-row justify-between items-start md:items-center gap-2 md:gap-0">
-          <div className="flex flex-wrap gap-2 max-sm:gap-1">
+        <p className="text-sm max-sm:text-xs">{truncate(about)}</p>
+        <div className="flex flex-col lg:flex-row justify-between items-end md:items-center gap-2 md:gap-0">
+          <div className="flex gap-2 max-sm:gap-1 w-full">
             {tags.map((tag) => (
               <span
                 key={tag}
@@ -82,6 +82,10 @@ function Coach({
       </div>
     </div>
   );
+}
+
+const truncate = (text:string) => {
+  return text.length > 80 ? text.substring(0, 80) + '...' : text;
 }
 
 export default Coach;

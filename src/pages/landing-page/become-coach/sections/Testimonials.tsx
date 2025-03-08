@@ -97,7 +97,7 @@ function Testimonials() {
 
   return (
     <section className="py-16 max-sm:py-8 flex flex-col gap-6 max-sm:gap-4">
-      <h3 className="text-xl max-sm:text-lg md:text-xl lg:text-xl font-semibold text-center">
+      <h3 className="text-xl max-sm:text-lg md:text-xl lg:text-3xl font-semibold text-center">
         Testimonials from other
         <br />
         successful Coaches
@@ -106,7 +106,7 @@ function Testimonials() {
         <Carousel
           responsive={responsive}
           className="pl-44 max-sm:pl-4 pb-24 max-sm:pb-16"
-          infinite={true}
+          // infinite={true}
           arrows={false}
           customButtonGroup={<ButtonGroup />}
         >

@@ -36,7 +36,8 @@ function MakeDifference() {
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
       >
-        Our Coaching Programs
+        Your time makes all the<br />
+        difference in their growth
       </motion.h1>
       <motion.p
         className="text-base max-sm:text-sm md:text-base text-center"
@@ -44,9 +45,8 @@ function MakeDifference() {
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
       >
-        Let's build the future of learning and professional
-        <br />
-        coaching together!
+        Address students specific challenges and goals, and be the mentor who< br />
+        helps them grow in their personal and professional journey.
       </motion.p>
       <motion.div
         className="flex flex-col md:flex-row justify-center gap-10 max-sm:gap-6 text-white mt-8 max-sm:mt-6"
@@ -60,7 +60,7 @@ function MakeDifference() {
         >
           <img
             src={MentorEmpowerImage}
-            className="w-full max-w-[200px] max-sm:max-w-full md:max-w-[250px] h-auto"
+            className="w-full max-w-[200px] max-sm:max-w-full md:max-w-[100%] h-auto"
             alt="Mentor & Empower"
           />
           <h3 className="text-2xl max-sm:text-lg md:text-xl lg:text-2xl font-semibold mt-2">
@@ -78,7 +78,7 @@ function MakeDifference() {
         >
           <img
             src={EarnLiveImage}
-            className="w-full max-w-[200px] max-sm:max-w-full md:max-w-[250px] h-auto"
+            className="w-full max-w-[200px] max-sm:max-w-full md:max-w-[100%] h-auto"
             alt="Earn & Live Greatly"
           />
           <h3 className="text-2xl max-sm:text-lg md:text-xl lg:text-2xl font-semibold mt-2">

@@ -29,15 +29,14 @@ function FindCoach() {
   ];
 
   return (
-    <Container className="my-16 max-sm:my-8 px-4 sm:px-12 md:px-24 lg:px-44 flex flex-col gap-10 max-sm:gap-6">
+    <Container className="my-16 max-sm:my-8 px-4 sm:px-12 md:px-24 lg:px-44 pt-24 flex flex-col gap-10 max-sm:gap-6">
       <div className="flex flex-col items-center text-center gap-2 max-sm:gap-1">
         <h2 className="text-xl max-sm:text-lg md:text-xl lg:text-xl font-bold">
           Independent Coaches (1500)
         </h2>
-        <p className="text-sm max-sm:text-xs md:text-sm">
+        <p className="text-sm max-sm:text-xs md:text-sm lg:w-1/2">
           Take one step closer to achieving your personal or professional goals
           with expert
-          <br />
           guidance, tailored support, and the right tools to help you succeed
         </p>
         <Link
@@ -54,10 +53,9 @@ function FindCoach() {
         <h2 className="text-xl max-sm:text-lg md:text-xl lg:text-xl font-bold">
           Independent Companies (600)
         </h2>
-        <p className="text-sm max-sm:text-xs md:text-sm">
+        <p className="text-sm max-sm:text-xs md:text-sm lg:w-1/2">
           Empower your employees to identify their strengths, overcome
           weaknesses, and
-          <br />
           enhance their skills for greater productivity and success.
         </p>
         <Link

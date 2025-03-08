@@ -17,7 +17,7 @@ function SubHero() {
         <img src={WaveImage} className="w-full" alt="Wave Background" />
       </motion.div>
       <motion.div
-        className="flex flex-col items-center gap-1 -mt-6 sm:-mt-8 md:-mt-10 lg:-mt-12 bg-[#EBF2FB] pb-14"
+        className="flex flex-col items-center gap-1 -mt-6 sm:-mt-8 md:-mt-10 lg:-mt-44 bg-[#EBF2FB] pb-14"
         initial={{ opacity: 0, y: 50 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.5, delay: 0.2 }}

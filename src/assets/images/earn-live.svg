@@ -1,13 +1,13 @@
 <svg width="627" height="511" viewBox="0 0 627 511" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g filter="url(#filter0_d_2351_305)">
 <mask id="path-1-inside-1_2351_305" fill="white">
-<rect x="112.268" y="109.457" width="400.5" height="284" rx="8"/>
+<rect x="112" y="109.457" width="400.5" height="284" rx="8"/>
 </mask>
-<rect x="112.268" y="109.457" width="400.5" height="284" rx="8" fill="url(#pattern0_2351_305)" shape-rendering="crispEdges"/>
-<rect x="112.268" y="109.457" width="400.5" height="284" rx="8" stroke="white" stroke-width="20" shape-rendering="crispEdges" mask="url(#path-1-inside-1_2351_305)"/>
+<rect x="112" y="109.457" width="400.5" height="284" rx="8" fill="url(#pattern0_2351_305)" shape-rendering="crispEdges"/>
+<rect x="112" y="109.457" width="400.5" height="284" rx="8" stroke="white" stroke-width="20" shape-rendering="crispEdges" mask="url(#path-1-inside-1_2351_305)"/>
 </g>
 <defs>
-<filter id="filter0_d_2351_305" x="0.267578" y="0.457031" width="626.5" height="510" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_d_2351_305" x="0" y="0.457031" width="626.5" height="510" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feMorphology radius="10" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_2351_305"/>

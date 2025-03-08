@@ -12,7 +12,7 @@ function Hero() {
   return (
     <Container
       ref={ref}
-      className="min-h-screen max-sm:min-h-fit flex flex-col max-sm:mt-10 lg:flex-row items-center lg:justify-between px-4 md:px-8 lg:px-44 w-full lg:w-11/12 mx-auto"
+      className="min-h-screen max-sm:min-h-fit flex flex-col max-sm:mt-10 lg:flex-row items-center pt-12 lg:justify-between px-4 md:px-8 lg:px-44 w-full lg:w-11/12 mx-auto"
     >
       <motion.div
         className="flex flex-col items-center lg:items-start gap-8 text-center lg:text-left w-full lg:w-1/2"
@@ -26,7 +26,7 @@ function Hero() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold lg:leading-[55px]">
             Empowering Lives
             <br />
             Through Coaching

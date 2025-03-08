@@ -1,4 +1,5 @@
 import HowToImage from "@/assets/images/how-to-become-coach.png";
+import { Button } from "@/components/base";
 import { Container, Icon } from "@/components/inc";
 import { PRIMARY_COLOR } from "@/constants";
 import { motion } from "framer-motion";
@@ -57,13 +58,13 @@ function HowTo() {
         animate={inView ? "visible" : "hidden"}
       />
       <motion.div
-        className="w-full md:w-1/2 flex flex-col gap-5 max-sm:gap-4"
+        className="w-full md:w-1/2 flex flex-col items-end gap-5 max-sm:gap-4"
         variants={containerVariants}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
       >
         <motion.h2
-          className="text-xl max-sm:text-lg md:text-xl lg:text-xl font-bold"
+          className="w-full text-xl max-sm:text-lg md:text-xl lg:text-xl font-bold"
           variants={itemVariants}
         >
           How to become a coach
@@ -80,6 +81,15 @@ function HowTo() {
         {items.map((item, index) => (
           <Item key={index} {...item} itemVariants={itemVariants} />
         ))}
+        <Button variant="outline" size="lg" className="border-primary bg-[#F0F3FF] hover:bg-primary.2 text-primary !p-0 !py-0 !pl-4 overflow-hidden gap-4">
+          Join us today
+          <Icon
+            name="arrow_right"
+            bg={PRIMARY_COLOR}
+            size={20}
+            className="!h-full !w-12"
+          />
+        </Button>
       </motion.div>
     </Container>
   );

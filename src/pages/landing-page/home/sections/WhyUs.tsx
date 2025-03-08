@@ -9,7 +9,7 @@ function WhyUs() {
   return (
     <Container
       ref={ref}
-      className="flex flex-col items-center py-14 min-h-screen gap-8"
+      className="flex flex-col items-center py-14 min-h-screen gap-8 lg:px-56"
     >
       <motion.div
         className="flex flex-col items-center"
@@ -27,9 +27,9 @@ function WhyUs() {
           receive the best possible experience
         </p>
       </motion.div>
-      <div className="grid grid-cols-2 md:grid-cols-3 grid-rows-3 md:grid-rows-2  max-sm:-mt-20 w-full h-full gap-4 max-sm:gap-2 lg:gap-6 text-white">
+      <div className="grid grid-cols-2 md:grid-cols-3 grid-rows-3 md:grid-rows-2 max-sm:-mt-20 w-full h-full gap-4 max-sm:gap-2 lg:gap-6 text-white">
         <motion.div
-          className="bg-primary rounded-lg max-sm:rounded-[32px] p-4 lg:p-8 max-sm:p-4 max-sm:pb-5 max-sm:h-fit max-sm:mt-24 flex flex-col gap-4 col-span-2 md:col-span-1"
+          className="bg-primary lg:rounded-xl max-sm:rounded-xl p-4 lg:p-8 max-sm:p-4 max-sm:pb-5 max-sm:h-fit max-sm:mt-24 flex flex-col gap-4 col-span-2 md:col-span-1"
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -46,7 +46,7 @@ function WhyUs() {
           </div>
         </motion.div>
         <motion.div
-          className="bg-primary rounded-lg max-sm:rounded-[32px] p-4 lg:p-8 max-sm:p-4 flex flex-col gap-4 col-span-1"
+          className="bg-primary rounded-xl max-sm:rounded-xl p-4 lg:p-8 max-sm:p-4 flex flex-col gap-4 col-span-1"
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.4 }}
@@ -64,7 +64,7 @@ function WhyUs() {
           </div>
         </motion.div>
         <motion.div
-          className="bg-[#00398F] rounded-lg max-sm:rounded-[32px] p-4 lg:p-8 max-sm:p-4 flex flex-col items-start justify-between row-span-2 col-span-1 md:col-span-1"
+          className="bg-[#00398F] rounded-xl max-sm:rounded-xl p-4 lg:p-8 max-sm:p-4 flex flex-col items-start justify-between row-span-2 col-span-1 md:col-span-1"
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.6 }}
@@ -76,18 +76,19 @@ function WhyUs() {
                 Elevate Your Impact
               </h4>
               <p className="text-sm mt-2 max-sm:text-xs">
-                Unlock powerful tools and resources to enhance client
-                engagement, boost retention, and deliver transformative coaching
-                experiences.
+                Unlock powerful tools and resources that are designed to enhance client engagement,
+                foster deeper connections, and drive sustained growth. With our comprehensive suite of solutions,
+                you can provide personalized, impactful experiences that resonate with each individual client.
               </p>
             </div>
-            <p className="max-sm:text-xs">
-              With us, you can feel confident knowing that your project is in
-              capable hands, and your goals are our top priority
+            <p className="text-sm max-sm:text-xs">
+              With us, you can feel confident knowing that your project is in capable hands.
+              Our experienced and dedicated team is here to support you every step of the way,
+              ensuring that your vision is brought to life with precision and care
             </p>
           </div>
           <Button
-            className="bg-white text-grey-text font-bold mt-4"
+            className="bg-white text-grey-text font-bold mt-4 max-sm:mt-3 max-sm:text-sm max-sm:px-4 max-sm:h-10"
             pill
             size="lg"
           >
@@ -95,7 +96,7 @@ function WhyUs() {
           </Button>
         </motion.div>
         <motion.div
-          className="bg-primary rounded-lg p-4 lg:p-8 max-sm:rounded-[32px] max-sm:p-4 flex flex-col gap-4 col-span-1 md:col-span-2"
+          className="bg-primary rounded-xl p-4 lg:p-8 max-sm:rounded-xl max-sm:p-4 flex flex-col gap-4 col-span-1 md:col-span-2"
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.8 }}
