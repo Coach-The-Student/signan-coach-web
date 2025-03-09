@@ -3,31 +3,24 @@ import CoachOrClient from "@/pages/auth/CoachOrClient";
 import { lazy } from "react";
 import { Route, Routes } from "react-router";
 
-const Home = lazy(() => import("@/pages/landing-page/home/Home"));
-const Dashboard = lazy(() => import("@/pages/dashboard/Dashboard"));
-const ConfirmEmail = lazy(
-  () => import("@/pages/auth/resetPassword/ConfirmEmail")
-);
-const Login = lazy(() => import("@/pages/auth/Login"));
-const NewPassword = lazy(
-  () => import("@/pages/auth/resetPassword/NewPassword")
-);
-const Register = lazy(() => import("@/pages/auth/Register"));
-const VerifyEmail = lazy(() => import("@/pages/auth/VerifyEmail"));
 const LayoutAuth = lazy(() => import("@/pages/auth/layouts/LayoutAuth"));
-const LayoutDashboardHeader = lazy(
-  () => import("@/layouts/LayoutDashboardHeader")
-);
+const LayoutDashboardHeader = lazy(() => import("@/layouts/LayoutDashboardHeader"));
 const LayoutHeader = lazy(() => import("@/layouts/LayoutHeader"));
-const LayoutDashboardSidebar = lazy(
-  () => import("@/layouts/LayoutDashboardSidebar")
-);
-const BecomeCoach = lazy(
-  () => import("@/pages/landing-page/become-coach/BecomeCoach")
-);
-const FindCoach = lazy(
-  () => import("@/pages/landing-page/find-coach/FindCoach")
-);
+const LayoutDashboardSidebar = lazy(() => import("@/layouts/LayoutDashboardSidebar"));
+
+const Home = lazy(() => import("@/pages/landing-page/home/Home"));
+const BecomeCoach = lazy(() => import("@/pages/landing-page/become-coach/BecomeCoach"));
+const FindCoach = lazy(() => import("@/pages/landing-page/find-coach/FindCoach"));
+
+const Login = lazy(() => import("@/pages/auth/Login"));
+const Register = lazy(() => import("@/pages/auth/Register"));
+const ConfirmEmail = lazy(() => import("@/pages/auth/resetPassword/ConfirmEmail"));
+const NewPassword = lazy(() => import("@/pages/auth/resetPassword/NewPassword"));
+const VerifyEmail = lazy(() => import("@/pages/auth/VerifyEmail"));
+
+const Dashboard = lazy(() => import("@/pages/dashboard/dashboard/Dashboard"));
+const Engagements = lazy(() => import("@/pages/dashboard/engagements/Engagements"));
+const Resources = lazy(() => import("@/pages/dashboard/resources/Resources"));
 
 function Router() {
   return (
@@ -58,6 +51,8 @@ function Router() {
         <Route element={<LayoutDashboardHeader />}>
           <Route element={<LayoutDashboardSidebar />}>
             <Route path="" element={<Dashboard />} />
+            <Route path="engagements" element={<Engagements />} />
+            <Route path="resources" element={<Resources />} />
           </Route>
         </Route>
       </Route>

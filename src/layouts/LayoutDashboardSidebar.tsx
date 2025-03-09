@@ -25,7 +25,16 @@ function LayoutDashboardSidebar() {
           <ul className="flex flex-col">
             {data.dashboard_navs.map((nav) => (
               <li>
-                <NavLink to={`/dashboard${nav.href ? `/${nav.href}` : ""}`} className={({isActive}) => `${isActive && "bg-grey-light"} w-full py-3 px-4 rounded-lg text-xs font-medium flex items-center gap-4`}>
+                <NavLink
+                  to={`/dashboard${nav.href ? `${nav.href}` : ""}`}
+                  className={
+                    ({isActive}) => (
+                      `${isActive && "bg-grey-light"}
+                      w-full py-3 px-4 rounded-lg text-xs font-medium flex items-center gap-4`
+                    )
+                  }
+                  end
+                >
                   {/* todo: write correct dynamic types */}
                   {/* @ts-ignore: icon names exist as icons */}
                   <img src={icons[nav.icon]} width={20} />

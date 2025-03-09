@@ -50,10 +50,6 @@ function LayoutDashboardHeader() {
       href: "/marketplace",
     },
     {
-      title: "AI Content",
-      href: "/ai-content",
-    },
-    {
       title: "Home",
       href: "/",
     },
@@ -72,7 +68,7 @@ function LayoutDashboardHeader() {
                 <li key={index}>
                   <Link
                     to={nav.href}
-                    className="text-grey-text text-sm text-[#3A3A3ACC]"
+                    className="text-grey-text text-xs font-[Montserrat] text-[#3A3A3ACC]"
                   >
                     {nav.title}
                   </Link>

@@ -15,10 +15,10 @@ interface HeaderProps {
 }
 function Header({children, title, info}:HeaderProps) {
   return (
-    <div className="p-4 border-b border-border-grey">
+    <div className="p-6 border-b border-border-grey">
       {title ? (
         <div className="flex justify-between items-center">
-          <h3 className="font-medium">{title}</h3>
+          <h3 className="text-sm font-bold">{title}</h3>
           {info && <img src={infoIcon} />}
         </div>
       ) : children}
@@ -26,9 +26,9 @@ function Header({children, title, info}:HeaderProps) {
   )
 }
 
-function Body({children}:{children: React.ReactNode}) {
+function Body({children, className}:{children: React.ReactNode, className?: string}) {
   return (
-    <div className="p-4 py-10">
+    <div className={`p-6 ${className}`}>
       {children}
     </div>
   )

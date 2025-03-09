@@ -18,7 +18,7 @@ function Assignment({
           <p className="text-xs text-grey-text">{message}</p>
         </div>
       </div>
-      <Button size="sm" className="text-[10px] bg-primary/10 text-grey-text">View Details</Button>
+      <Button size="sm" className="text-[10px] bg-primary/10 hover:bg-primary/10 hover:opacity-80 text-grey-text">View Details</Button>
     </div>
   )
 }

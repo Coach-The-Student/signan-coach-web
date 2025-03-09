@@ -6,21 +6,24 @@ module.exports = {
     content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
   theme: {
   	extend: {
-  		borderRadius: {
-  			lg: 'var(--radius)',
-  			md: 'calc(var(--radius) - 2px)',
-  			sm: 'calc(var(--radius) - 4px)'
-  		},
+  		// borderRadius: {
+  		// 	lg: 'var(--radius)',
+  		// 	md: 'calc(var(--radius) - 2px)',
+  		// 	sm: 'calc(var(--radius) - 4px)'
+  		// },
   		colors: {
         primary: "#0052CC",
+        "primary-20": "#E1E6FF",
         secondary: "#EBF2FB",
         input: '#F2F2F2CC',
+        danger: "#FF0202",
+        warning: "#FFCE46",
         "input-text": '#3C3C43',
         "dark-text": '#17171B',
         "grey-text": '#3C3C43',
-        "border-grey": '#BDBDC6',
         "grey-light": "#F4F4F7",
-        "grey-card": "#F7F7FA"
+        "grey-card": "#F7F7FA",
+        "border-grey": '#BDBDC6',
       }
   	},
     screens: {
