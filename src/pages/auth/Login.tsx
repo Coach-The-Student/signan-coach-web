@@ -9,16 +9,31 @@ import "react-toastify/dist/ReactToastify.css";
 function Login() {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const validateForm = (data: any) => {
+    const newErrors: { [key: string]: string } = {};
+    if (!data.email) newErrors.email = "Email is required";
+    if (!data.password) newErrors.password = "Password is required";
+    return newErrors;
+  };
+
   const handleSubmit = async (e: any) => {
     e.preventDefault();
+    const data = { email, password };
+    
+    const formErrors = validateForm(data);
+    if (Object.keys(formErrors).length > 0) {
+      setErrors(formErrors);
+      return;
+    }
+    
     setLoading(true);
     try {
-      const data = { email, password };
       const response = await login(data);
-      await setToken(response.token);
+      setToken(response.token);
       toast.success("Login successful!");
       navigate("/dashboard");
     } catch (error) {
@@ -34,13 +49,16 @@ function Login() {
       <form onSubmit={handleSubmit} className="flex flex-col gap-3">
         <Input
           label="Email address"
+          type="email"
           value={email}
+          error={errors.email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <Input
           label="Password"
           type="password"
           value={password}
+          error={errors.password}
           onChange={(e) => setPassword(e.target.value)}
         />
         <Button size="lg" className="mt-4" loading={loading}>

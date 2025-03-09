@@ -36,24 +36,24 @@ function AchieveGoals() {
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
       >
-        <div className="w-full md:w-1/2 flex flex-col justify-center gap-6 pl-4 md:pl-16 max-sm:p-6">
+        <div className="w-full md:w-1/2 flex flex-col justify-center gap-6 pl-4 md:pl-16 max-sm:p-6 max-sm:pb-0">
           <motion.div
             className="flex flex-col gap-4 md:gap-6"
             variants={itemVariants}
           >
-            <h3 className="text-2xl max-sm:text-xl md:text-3xl font-bold">
+            <h3 className="text-2xl max-sm:text-xl md:text-3xl font-bold text-center md:text-left">
               Achieve your goals
               <br />
               with us
             </h3>
-            <p className="w-full md:w-[50%] font-medium text-grey-text text-xs md:text-sm">
+            <p className="w-full md:w-[50%] font-medium text-grey-text text-xs md:text-sm text-center md:text-left">
               Partner with top coaches, gain expert insights, and access
               powerful tools designed to help you stay focused, overcome
               challenges, and achieve your biggest goals
             </p>
           </motion.div>
           <motion.div
-            className="flex flex-col md:flex-row gap-4 w-full md:w-2/3"
+            className="hidden lg:flex flex-col md:flex-row gap-4 w-full md:w-2/3"
             variants={itemVariants}
           >
             <Button
@@ -76,7 +76,7 @@ function AchieveGoals() {
         </div>
         <motion.div
           variants={itemVariants}
-          className="w-full md:w-1/2 flex justify-center pt-6 md:pt-16 max-sm:pb-6"
+          className="w-full md:w-1/2 flex justify-center md:pt-16"
         >
           <img
             src={AchieveGoalsImage}
@@ -145,6 +145,27 @@ function AchieveGoals() {
           />
         </motion.div>
       </div>
+      <motion.div
+        className="flex lg:hidden flex-col md:flex-row gap-4 w-full md:w-2/3 py-12 px-4"
+        variants={itemVariants}
+      >
+        <Button
+          size="lg"
+          variant="ghost"
+          className="w-full bg-black text-white rounded-none hover:opacity-80 text-sm md:text-base"
+        >
+          <Icon name="playstore" />
+          Get From Playstore
+        </Button>
+        <Button
+          size="lg"
+          variant="ghost"
+          className="w-full bg-black text-white rounded-none hover:opacity-80 text-sm md:text-base"
+        >
+          <Icon name="appstore" />
+          Get On Appstore
+        </Button>
+      </motion.div>
     </Container>
   );
 }

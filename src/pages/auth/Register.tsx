@@ -57,27 +57,14 @@ function Register() {
   return (
     <>
       <h2 className="text-2xl font-semibold">Create Account</h2>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-        <div className="w-full flex gap-3">
-          <Input name="firstName" label="First Name" />
-          {errors.first_name && (
-            <span className="text-red-500">{errors.first_name}</span>
-          )}
-          <Input name="lastName" label="Last Name" />
-          {errors.last_name && (
-            <span className="text-red-500">{errors.last_name}</span>
-          )}
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+        <div className="w-full flex gap-4">
+          <Input name="firstName" label="First Name" error={errors.first_name} />
+          <Input name="lastName" label="Last Name" error={errors.last_name} />
         </div>
-        <Input name="email" label="Email" />
-        {errors.email && <span className="text-red-500">{errors.email}</span>}
-        <Input name="password" label="Password" />
-        {errors.password && (
-          <span className="text-red-500">{errors.password}</span>
-        )}
-        <Input name="confirmPassword" label="Confirm Password" />
-        {errors.confirmPassword && (
-          <span className="text-red-500">{errors.confirmPassword}</span>
-        )}
+        <Input name="email" label="Email" error={errors.email} />
+        <Input name="password" type="password" label="Password" error={errors.password} />
+        <Input name="confirmPassword" type="password" label="Confirm Password" error={errors.confirmPassword} />
         <Button size="lg" className="mt-4" loading={loading}>
           Continue
         </Button>

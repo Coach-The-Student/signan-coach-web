@@ -96,7 +96,7 @@ function Testimonials() {
   };
 
   return (
-    <section className="py-16 max-sm:py-8 flex flex-col gap-6 max-sm:gap-4">
+    <section className="py-16 max-sm:py-0 flex flex-col gap-6 max-sm:gap-4">
       <h3 className="text-xl max-sm:text-lg md:text-xl lg:text-3xl font-semibold text-center">
         Testimonials from other
         <br />
@@ -150,10 +150,10 @@ const ButtonGroup = ({ next, previous, goToSlide, ...rest }: any) => {
         className={currentSlide === 0 ? "disable" : ""}
         onClick={() => previous()}
       >
-        <Icon name="arrow_lesser_black" size={40} className="max-sm:size-8" />
+        <Icon name="arrow_lesser_black" size={40} className="max-sm:!w-8" />
       </button>
       <button onClick={() => next()}>
-        <Icon name="arrow_greater_black" size={40} className="max-sm:size-8" />
+        <Icon name="arrow_greater_black" size={40} className="max-sm:!w-8" />
       </button>
     </div>
   );

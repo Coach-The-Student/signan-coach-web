@@ -52,7 +52,7 @@ function LayoutHeader() {
               <Button
                 variant="grey"
                 className="rounded-full px-6 text-sm md:text-base"
-                onClick={() => navigate("/auth/login")}
+                onClick={() => navigate("/dashboard/login")}
               >
                 Login
               </Button>

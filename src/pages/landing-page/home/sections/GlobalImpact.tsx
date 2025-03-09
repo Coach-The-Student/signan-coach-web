@@ -37,7 +37,7 @@ function GlobalImpact() {
         animate={inView ? "visible" : "hidden"}
       >
         <motion.h3
-          className="text-2xl max-sm:text-lg font-bold"
+          className="text-2xl max-sm:text-lg font-bold max-sm:text-center lg:text-left"
           variants={itemVariants}
         >
           Make a Global Impact as a
@@ -45,7 +45,7 @@ function GlobalImpact() {
           Coach with Signan Solution
         </motion.h3>
         <motion.p
-          className="text-sm max-sm:text-[10px] max-sm:w-full"
+          className="text-sm max-sm:text-[10px] max-sm:w-full max-sm:text-center lg:text-left"
           variants={itemVariants}
         >
           Join a global network of professional coaches and expand your reach

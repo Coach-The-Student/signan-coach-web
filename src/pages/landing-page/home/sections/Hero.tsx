@@ -48,7 +48,7 @@ function Hero() {
             pill
             className="h-fit p-3"
             size="lg"
-            onClick={() => navigate("/set-role")}
+            onClick={() => navigate("/dashboard/coach-or-client?type=new_user")}
             iconRight={<Icon name="arrow_forward" size={16} />}
           >
             Get Started
