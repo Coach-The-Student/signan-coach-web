@@ -31,6 +31,7 @@ function LayoutDashboardHeader() {
     const fetchProfile = async () => {
       try {
         const user = await profile();
+        localStorage.setItem("user", JSON.stringify(user));
         setUser(user);
       } catch (error) {
         console.error("Failed to fetch profile:", error);
