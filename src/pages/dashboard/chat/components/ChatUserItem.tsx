@@ -3,17 +3,17 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/inc";
 interface Props {
   name: string;
   profilePicture: string;
-  unreadMessages?: number; // Optional if not always available
-  onlineStatus?: boolean; // Optional if not always available
-  message?: string; // Add the message prop
+  unreadMessages?: number;
+  onlineStatus?: boolean;
+  message?: string;
 }
 
 function ChatUserItem({
   name,
   profilePicture,
-  unreadMessages = 0, // Default to 0 if not provided
-  onlineStatus = false, // Default to false if not provided
-  message = "", // Default to an empty string if not provided
+  unreadMessages = 0,
+  onlineStatus = false,
+  message = "",
 }: Props) {
   return (
     <div className="flex items-start justify-between px-4 py-2">
@@ -30,7 +30,6 @@ function ChatUserItem({
         <div className="flex flex-col">
           <h3 className="font-semibold text-sm">{name}</h3>
           <p className="text-gray-600 text-xs">{message}</p>{" "}
-          {/* Display the message */}
         </div>
       </div>
       {unreadMessages > 0 && (
